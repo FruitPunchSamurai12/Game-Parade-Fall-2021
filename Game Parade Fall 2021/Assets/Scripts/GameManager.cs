@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void Start()
-    {
+    {   
         var player = Instantiate(playerPrefab, spawnPlayerPos.position, Quaternion.identity);
         PlayerTransform = player.transform;
         var neko = Instantiate<Bakeneko>(catPrefab, spawnCatPos.position, Quaternion.identity);

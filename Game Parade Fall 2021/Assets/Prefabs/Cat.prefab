@@ -245,8 +245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454f36fe24c14b4429030fcd4564aacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chaseMoveSpeed: 20
-  _neutralMoveSpeed: 15
+  _chaseMoveSpeed: 10
+  _neutralMoveSpeed: 7.5
   _catchDistance: 1
   _sightRange: 10
   _sightAngle: 45

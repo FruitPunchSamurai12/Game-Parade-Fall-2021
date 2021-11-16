@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836290618623284801}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0.5, z: -3.26}
+  m_LocalPosition: {x: 0, y: 0.5, z: -4.2599983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 836290620634940175}
@@ -159,7 +159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836290619142312519}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0.5, z: -3.26}
+  m_LocalPosition: {x: 0, y: 0.5, z: -4.2599983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 836290618928106039}
@@ -291,6 +291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 836290619443348034}
+  - component: {fileID: 6995962886461901012}
   - component: {fileID: 836290619443348033}
   m_Layer: 0
   m_Name: CameraTarget
@@ -313,6 +314,21 @@ Transform:
   m_Father: {fileID: 836290618928106039}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6995962886461901012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836290619443348032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c38e25db3b41e4fb0498839d2d98b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensivity: 0.2
+  xLimit: 60
+  playerRotationSmoothness: 0
 --- !u!114 &836290619443348033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9abc55740c384c940b2f3e1aaf2fac36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSmoothness: 0.2
+  followSmoothness: 0.9
 --- !u!1 &836290620634940174
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0.5, y: 0.5, z: 0.5}
-  ShoulderOffset: {x: 0.75, y: 0.5, z: 0}
+  ShoulderOffset: {x: 0, y: 0.5, z: -1}
   VerticalArmLength: 0
   CameraSide: 1
   CameraDistance: 3.26

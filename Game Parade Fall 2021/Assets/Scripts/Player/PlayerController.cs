@@ -1,12 +1,9 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    GameObject cameraPrefab;
-
-    [Header("Movement")]
     [SerializeField]
     bool isSprinting = false;
     [SerializeField]
@@ -22,27 +19,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float staminaRegenerateRate = 0.02f;
 
-    [Header("Rotation")]
-    [SerializeField]
-    float sensivity = 0.5f;
-    [SerializeField]
-    float xLimit = 45f;
-    [SerializeField] [Range(0f, 1f)]
-    float playerRotationSmoothness = 0.5f;
-
     Vector2 movementInput;
-    Vector2 mouseInput;
     float speed = 0f;
-    float yRot = 0f;
-    float xRot = 0f;
 
     new Rigidbody rigidbody;
-    Transform cameraTarget;
 
     private void OnEnable()
     {
-        InputManager.Actions.Player.Sprint.started += ctx => isSprinting = true;
-        InputManager.Actions.Player.Sprint.canceled += ctx => isSprinting = false;
+        InputManager.Actions.Player.Sprint.started += OnSprintStart; 
+        InputManager.Actions.Player.Sprint.canceled += OnSprintEnd;
     }
 
     private void Awake()
@@ -57,9 +42,6 @@ public class PlayerController : MonoBehaviour
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-
-        Instantiate(cameraPrefab, transform.position, Quaternion.identity);
-        cameraTarget = GameObject.FindWithTag("CameraTarget").transform;
     }
 
     private void Update()
@@ -70,15 +52,11 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         ApplyMovement();
-        ApplyRotation();
-
-        Stamina();
     }
 
     void GetInput ()
     {
         movementInput = InputManager.Actions.Player.Movement.ReadValue<Vector2>();
-        mouseInput = InputManager.Actions.Player.CameraRotation.ReadValue<Vector2>();
     }
 
     void ApplyMovement ()
@@ -90,31 +68,35 @@ public class PlayerController : MonoBehaviour
         speed = isSprinting && currentStamina > 0f ? sprintSpeed : walkSpeed;
     }
 
-    void Stamina ()
-    {
-        if (isSprinting && currentStamina > 0f && movementInput != Vector2.zero)
-            currentStamina -= staminaCostRate;
-        else if (!isSprinting && currentStamina < maxStamina)
-            currentStamina += staminaRegenerateRate;
+    
 
-        if (currentStamina > maxStamina) currentStamina = maxStamina;
-        else if (currentStamina < 0f) currentStamina = 0f;
+    void DepleteStamina ()
+    {
+        if (currentStamina > 0f)
+            currentStamina -= staminaCostRate;
+        else
+            currentStamina = 0f;
     }
 
-    void ApplyRotation ()
+    void RegenerateStamina ()
     {
-        mouseInput *= sensivity;
+        if (currentStamina < maxStamina)
+            currentStamina += staminaRegenerateRate;
+        else
+            currentStamina = maxStamina;
+    }
 
-        yRot += mouseInput.x;
+    void OnSprintStart (InputAction.CallbackContext ctx) 
+    {
+        isSprinting = true;
+        InvokeRepeating("DepleteStamina", 0f, 0.1f); 
+        CancelInvoke("RegenerateStamina");
+    }
 
-        xRot += mouseInput.y;
-        xRot = Mathf.Clamp(xRot, -xLimit, xLimit);
-
-        cameraTarget.localEulerAngles = new Vector3(xRot, yRot, 0f);
-
-        // Make player face camera forward direction while moving
-        var playerRotation = new Vector3(0f, cameraTarget.transform.rotation.eulerAngles.y, 0f);
-        if (movementInput != Vector2.zero) 
-            transform.rotation = Quaternion.Euler(Vector3.Lerp(transform.rotation.eulerAngles, playerRotation, 1 - playerRotationSmoothness));
+    void OnSprintEnd (InputAction.CallbackContext ctx)
+    {
+        isSprinting = false;
+        InvokeRepeating("RegenerateStamina", 0f, 0.1f); 
+        CancelInvoke("DepleteStamina");
     }
 }

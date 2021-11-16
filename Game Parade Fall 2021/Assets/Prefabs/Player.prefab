@@ -173,9 +173,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPrefab: {fileID: 836290618928106038, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
-  walkSpeed: 5
-  sprintSpeed: 10
-  sensivity: 0.4
+  isSprinting: 0
+  walkSpeed: 0.1
+  sprintSpeed: 0.4
+  maxStamina: 100
+  currentStamina: 100
+  staminaCostRate: 0.9
+  staminaRegenerateRate: 0.1
+  sensivity: 0.2
   xLimit: 45
   playerRotationSmoothness: 0
 --- !u!1 &7275037938780156073

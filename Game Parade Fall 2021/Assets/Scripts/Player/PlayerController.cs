@@ -8,9 +8,19 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField]
+    bool isSprinting = false;
+    [SerializeField]
     float walkSpeed = 5f;
     [SerializeField]
     float sprintSpeed = 10f;
+    [SerializeField]
+    float maxStamina = 100f;
+    [SerializeField]
+    float currentStamina = 0f;
+    [SerializeField]
+    float staminaCostRate = 0.01f;
+    [SerializeField]
+    float staminaRegenerateRate = 0.02f;
 
     [Header("Rotation")]
     [SerializeField]
@@ -31,8 +41,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        InputManager.Actions.Player.Sprint.started += ctx => speed = sprintSpeed;
-        InputManager.Actions.Player.Sprint.canceled += ctx => speed = walkSpeed;
+        InputManager.Actions.Player.Sprint.started += ctx => isSprinting = true;
+        InputManager.Actions.Player.Sprint.canceled += ctx => isSprinting = false;
     }
 
     private void Awake()
@@ -43,6 +53,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         speed = walkSpeed;
+        currentStamina = maxStamina;
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -60,6 +71,8 @@ public class PlayerController : MonoBehaviour
     {
         ApplyMovement();
         ApplyRotation();
+
+        Stamina();
     }
 
     void GetInput ()
@@ -72,7 +85,20 @@ public class PlayerController : MonoBehaviour
     {
         var moveRight = transform.right * movementInput.x * speed;
         var moveForward = transform.forward * movementInput.y * speed;
-        rigidbody.velocity = moveRight + moveForward;
+        rigidbody.MovePosition(rigidbody.position + moveRight + moveForward);
+
+        speed = isSprinting && currentStamina > 0f ? sprintSpeed : walkSpeed;
+    }
+
+    void Stamina ()
+    {
+        if (isSprinting && currentStamina > 0f && movementInput != Vector2.zero)
+            currentStamina -= staminaCostRate;
+        else if (!isSprinting && currentStamina < maxStamina)
+            currentStamina += staminaRegenerateRate;
+
+        if (currentStamina > maxStamina) currentStamina = maxStamina;
+        else if (currentStamina < 0f) currentStamina = 0f;
     }
 
     void ApplyRotation ()

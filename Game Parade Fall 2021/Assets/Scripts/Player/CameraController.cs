@@ -5,7 +5,9 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField]
-    float sensivity = 0.5f;
+    float sensivityH = 0.5f;
+    [SerializeField]
+    float sensiviryV = 0.5f;
     [SerializeField]
     float xLimit = 45f;
     [SerializeField]
@@ -38,7 +40,7 @@ public class CameraController : MonoBehaviour
 
     void ApplyRotation()
     {
-        mouseInput *= sensivity;
+        mouseInput = new Vector2(mouseInput.x * sensivityH, mouseInput.y * sensiviryV);
 
         yRot += mouseInput.x;
 

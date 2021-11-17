@@ -2345,6 +2345,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 7275037938626774247, guid: 4073ed0f3cdab4240b36fc44e4d06e8e, type: 3}
   spawnCatPos: {fileID: 1669222019}
   spawnPlayerPos: {fileID: 125831678}
+  exitPoint: {fileID: 0}
 --- !u!4 &1060711262
 Transform:
   m_ObjectHideFlags: 0
@@ -3178,6 +3179,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 836290619142312514, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 836290619142312514, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.7599983
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
 --- !u!1 &1369869930
@@ -3754,11 +3763,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefabToPlace: {fileID: 3354577566661149247, guid: 58c282b2872fd8a47927239e887060e5, type: 3}
-  _mazeTexture: {fileID: 2800000, guid: 7b10f85e761b43c48ae7b257456a2516, type: 3}
+  _mazeTexture: {fileID: 2800000, guid: fcde6f9e485e71d459d7738423748942, type: 3}
   _xOffset: 1
   _zOffset: 1
-  _width: 32
-  _height: 32
+  _width: 128
+  _height: 128
+  _wallColorThreshold: 0.557
   _mazeParent: {fileID: 1774440040}
 --- !u!4 &1655830868
 Transform:
@@ -4476,33 +4486,33 @@ MonoBehaviour:
     highestExposureLevels: 3
     multiplePinchPoints: 3
     highestExposureWaypoints:
-    - IDs: 0f00000011000000120000001600000021000000
-      exposure: 11
-    - IDs: 1f000000
-      exposure: 10
-    - IDs: 050000001000000013000000140000001500000020000000
-      exposure: 9
+    - IDs: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f0000002000000021000000
+      exposure: 34
+    - IDs: 
+      exposure: 0
+    - IDs: 
+      exposure: 0
     pinchPoints:
     - ID: 1
       InsideIDs: 00000000
       OutsideID: 2
-      ambushPointIDs: 0300000004000000050000000d000000
+      ambushPointIDs: 
     - ID: 7
       InsideIDs: 07000000
       OutsideID: 6
-      ambushPointIDs: 08000000
+      ambushPointIDs: 
     - ID: 9
       InsideIDs: 0a0000000b0000000c000000
       OutsideID: 8
-      ambushPointIDs: 06000000
+      ambushPointIDs: 
     - ID: 14
       InsideIDs: 0d000000020000000300000001000000040000000500000000000000060000000800000007000000090000000a0000000b0000000c000000
       OutsideID: 17
-      ambushPointIDs: 100000001100000012000000130000001400000015000000160000001f0000002000000021000000
+      ambushPointIDs: 
     - ID: 19
       InsideIDs: 14000000
       OutsideID: 18
-      ambushPointIDs: 1500000016000000
+      ambushPointIDs: 
 --- !u!1001 &2066745124
 PrefabInstance:
   m_ObjectHideFlags: 0

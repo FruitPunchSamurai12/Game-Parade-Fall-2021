@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Bakeneko catPrefab;
     [SerializeField]
-    GameObject playerPrefab;
+    PlayerMovement playerPrefab;
 
     [SerializeField]
     Transform spawnCatPos;
@@ -36,10 +36,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {   
-        var player = Instantiate(playerPrefab, spawnPlayerPos.position, Quaternion.identity);
+        var player = Instantiate<PlayerMovement>(playerPrefab, spawnPlayerPos.position, Quaternion.identity);
         PlayerTransform = player.transform;
         var neko = Instantiate<Bakeneko>(catPrefab, spawnCatPos.position, Quaternion.identity);
         CatTransform = neko.transform;
+        Director.Instance.SetCatAndBird(neko.GetComponent<CellTracker>(), player.GetComponent<CellTracker>());
     }
 
     public void GameOver()

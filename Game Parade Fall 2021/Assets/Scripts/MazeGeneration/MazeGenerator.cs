@@ -10,6 +10,9 @@ public class MazeGenerator : MonoBehaviour
     [SerializeField] float _zOffset=1;
     [SerializeField] int _width = 32;
     [SerializeField] int _height = 32;
+    [SerializeField] [Range(0, 1)] float _wallColorThreshold = 0.5f;
+
+   
 
     [SerializeField] Transform _mazeParent;
 
@@ -24,7 +27,7 @@ public class MazeGenerator : MonoBehaviour
             {
                 //Debug.Log(allPixels[i + _width * j]);
                 Color color = allPixels[i + _width * j];
-                if (color.r < 0.5f && color.g < 0.5f && color.b < 0.5f)
+                if (color.r < _wallColorThreshold && color.g < _wallColorThreshold && color.b < _wallColorThreshold)
                 {
                     var obj = Instantiate(_prefabToPlace, _mazeParent);
                     obj.transform.position = new Vector3(i * _xOffset, 2.5f, j * _zOffset);

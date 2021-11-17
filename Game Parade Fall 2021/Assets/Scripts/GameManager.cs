@@ -14,9 +14,12 @@ public class GameManager : MonoBehaviour
     Transform spawnCatPos;
     [SerializeField]
     Transform spawnPlayerPos;
+    [SerializeField]
+    Transform exitPoint;
 
     public Transform PlayerTransform { get; private set; }
     public Transform CatTransform { get; private set; }
+    public Transform ExitPoint { get { return exitPoint; } }
 
     public static GameManager Instance { get; private set; }
 

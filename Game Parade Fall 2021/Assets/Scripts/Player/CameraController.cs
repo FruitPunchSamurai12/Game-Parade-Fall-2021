@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
+        player = GameManager.Instance.PlayerTransform;
     }
 
     private void Update()
@@ -32,7 +32,7 @@ public class CameraController : MonoBehaviour
 
     void GetInput ()
     {
-        mouseInput = InputManager.Actions.Player.CameraRotation.ReadValue<Vector2>();
+        mouseInput = InputManager.Actions.Camera.Rotation.ReadValue<Vector2>();
         movementInput = InputManager.Actions.Player.Movement.ReadValue<Vector2>();
     }
 

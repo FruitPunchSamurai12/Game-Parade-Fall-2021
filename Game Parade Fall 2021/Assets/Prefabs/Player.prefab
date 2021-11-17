@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 7275037938626774243}
   - component: {fileID: 7275037938626774242}
   - component: {fileID: 7275037938626774241}
+  - component: {fileID: 292991551827564847}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -172,7 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06244e1dc07a55845b0e43e159734b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPrefab: {fileID: 836290618928106038, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
   isSprinting: 0
   walkSpeed: 0.1
   sprintSpeed: 0.2
@@ -180,9 +180,21 @@ MonoBehaviour:
   currentStamina: 100
   staminaCostRate: 0.8
   staminaRegenerateRate: 0.2
-  sensivity: 0.2
-  xLimit: 45
-  playerRotationSmoothness: 0
+--- !u!114 &292991551827564847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7275037938626774247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dabdf64dc0d8cf478e3520569d4043f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mark: {fileID: 4506842334376232532, guid: 658d2adcf18d1104c90166e4119b2aa1, type: 3}
+  markingDelay: 2
+  markPositionOffset: {x: 0, y: -0.5, z: 2}
 --- !u!1 &7275037938780156073
 GameObject:
   m_ObjectHideFlags: 0

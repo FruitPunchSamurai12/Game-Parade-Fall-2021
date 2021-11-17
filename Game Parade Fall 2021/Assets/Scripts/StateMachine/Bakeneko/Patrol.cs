@@ -19,7 +19,7 @@ public class Patrol : IState
 
     public void OnEnter()
     {
-        _target = WaypointManager.Instance.PickRandomPath();
+        _target = Director.Instance.PickRandomPath();
         _agent.SetDestination(_target);
     }
 
@@ -32,7 +32,7 @@ public class Patrol : IState
     {
         if(_agent.transform.position.FlatVectorDistanceSquared(_target)<_stoppingDistanceSqr)
         {
-            _target = WaypointManager.Instance.PickRandomPath();
+            _target = Director.Instance.PickRandomPath();
             _agent.SetDestination(_target);
         }
     }

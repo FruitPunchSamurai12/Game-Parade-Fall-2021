@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaypointManager : MonoBehaviour
+public class Director : MonoBehaviour
 {
     [SerializeField] Transform[] _waypoints;
 
+    CellTracker _catCellTracker;
+    CellTracker _birdCellTracker;
+
     int _previousWaypointIndex=-1;
 
-    public static WaypointManager Instance { get; private set; }
+    public static Director Instance { get; private set; }
 
     private void Awake()
     {
@@ -34,5 +37,16 @@ public class WaypointManager : MonoBehaviour
         _previousWaypointIndex = random;
         return _waypoints[random].position;
 
+    }
+
+    public Vector3 PickInvestigateTarget()
+    {
+        return _birdCellTracker.closestWaypoint.transform.position;
+    }
+
+    public void SetCatAndBird(CellTracker cat,CellTracker bird)
+    {
+        _catCellTracker = cat;
+        _birdCellTracker = bird;
     }
 }

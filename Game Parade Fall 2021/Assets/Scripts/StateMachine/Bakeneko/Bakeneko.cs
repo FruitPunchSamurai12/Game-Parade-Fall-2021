@@ -5,14 +5,20 @@ public class Bakeneko:MonoBehaviour
     [SerializeField] float _chaseMoveSpeed = 10f;
     [SerializeField] float _neutralMoveSpeed = 6f;
     [SerializeField] float _catchDistance = 1f;
+    [SerializeField] float _reactionTime = .75f;
+    [SerializeField] float _investigationTime = 10f;
     [SerializeField] float _sightRange = 10f;
     [SerializeField] float _sightAngle = 45f;
+    [SerializeField] float _lookRotationSpeed = 300f;
     [SerializeField] LayerMask _obstaclesLayer;
     [SerializeField] Transform _eyes;
 
     public float NeutralSpeed => _neutralMoveSpeed;
     public float ChaseSpeed => _chaseMoveSpeed;
     public float CatchDistance => _catchDistance;
+    public float ReactionTime => _reactionTime;
+    public float InvestigationTime => _investigationTime;
+    public float LookRotatioNSpeed => _lookRotationSpeed;
 
     Transform _playerTranform;
     float _sightRangeSqr;
@@ -37,6 +43,7 @@ public class Bakeneko:MonoBehaviour
             Physics.Raycast(_eyes.position, targetDir.normalized, out hit, distance, _obstaclesLayer);
             if (hit.collider == null)
             {
+
                 return true;
             }
             else

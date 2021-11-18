@@ -14,6 +14,11 @@ public class CellTracker : MonoBehaviour
     private void Start()
     {
         waypointManager = FindObjectOfType<WaypointManager>();
+        FindCurrentCell();
+    }
+
+    public void FindCurrentCell()
+    {
         foreach (var cell in SpatialPartition.Instance.cells)
         {
             if (cell.cellBounds.Contains(transform.position))
@@ -22,6 +27,13 @@ public class CellTracker : MonoBehaviour
                 break;
             }
         }
+        closestWaypointIndex = FindClosestWaypoint().ID;
+    }
+
+    public void Teleport(Vector3 position)
+    {
+        transform.position = position;
+        cellIndex = SpatialPartition.Instance.GetCellIndexFromPosition(position);
         closestWaypointIndex = FindClosestWaypoint().ID;
     }
 

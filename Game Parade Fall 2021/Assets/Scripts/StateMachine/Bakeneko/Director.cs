@@ -80,6 +80,12 @@ public class Director : MonoBehaviour
         LastInterestingLocation = location;
     }
 
+    public void TeleportCat(Waypoint waypoint)
+    {
+        _catCellTracker.Teleport(waypoint.transform.position);
+        _catCellTracker.GetComponent<AIStateMachine>().ResetStateMachine();
+    }
+
     public void SetCatAndBird(CellTracker cat,CellTracker bird)
     {
         _catCellTracker = cat;

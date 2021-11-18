@@ -38,7 +38,7 @@ public class Chase : IState
             _agent.SetDestination(_target.position);
             if (_agent.transform.position.FlatVectorDistanceSquared(_target.position) < _catchDistanceSqr)
             {
-                GameManager.Instance.GameOver();
+                GameManager.Instance.BirdGotCaught();
             }
         }
         else

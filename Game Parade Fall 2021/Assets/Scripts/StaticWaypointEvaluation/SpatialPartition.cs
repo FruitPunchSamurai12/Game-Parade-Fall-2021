@@ -132,6 +132,17 @@ public class SpatialPartition : MonoBehaviour
         return wps;
     }
 
+    public int GetCellIndexFromPosition(Vector3 position)
+    {
+        foreach (var cell in Instance.cells)
+        {
+            if (cell.cellBounds.Contains(position))
+            {
+                return cell.index;
+            }
+        }
+        return 0;
+    }
 
     public Waypoint GetClosestWaypointToAPosition(Vector3 position)
     {

@@ -20,31 +20,60 @@ public class GameManager : MonoBehaviour
     public Transform PlayerTransform { get; private set; }
     public Transform CatTransform { get; private set; }
     public Transform ExitPoint { get { return exitPoint; } }
+    public GameObject Bird { get; private set; }
 
-    public static GameManager Instance { get; private set; }
+    public GameObject Cat { get; private set; }
+
+    [SerializeField] int birdLives=3;
+    int currentBirdLives;
+
+
+    public event Action onBirdCaught;
+    public event Action onGameOver;
+
+    public static GameManager Instance { get; private set; } 
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
             Destroy(gameObject);
     }
 
     private void Start()
-    {   
+    {
+        currentBirdLives = birdLives;
         var player = Instantiate<PlayerMovement>(playerPrefab, spawnPlayerPos.position, Quaternion.identity);
         PlayerTransform = player.transform;
+        Bird = player.gameObject;
         var neko = Instantiate<Bakeneko>(catPrefab, spawnCatPos.position, Quaternion.identity);
         CatTransform = neko.transform;
+        Cat = neko.gameObject;
         Director.Instance.SetCatAndBird(neko.GetComponent<CellTracker>(), player.GetComponent<CellTracker>());
     }
 
-    public void GameOver()
+    public void BirdGotCaught()
     {
-        Debug.Log("game over");
+        currentBirdLives--;
+        if(currentBirdLives<=0)
+        {
+            onGameOver?.Invoke();
+            Debug.Log("Game over");
+        }
+        else
+        {
+            onBirdCaught?.Invoke();
+        }
     }
+
+
+    public void RespawnBird(Checkpoint currentCheckpoint)
+    {
+        Bird.GetComponent<CellTracker>().Teleport(currentCheckpoint.transform.position);
+        Director.Instance.TeleportCat(currentCheckpoint.waypointToTeleportCatAfterItCatchesTheBird);
+    }
+
 }

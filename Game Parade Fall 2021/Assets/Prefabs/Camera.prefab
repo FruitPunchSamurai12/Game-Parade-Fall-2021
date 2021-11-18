@@ -91,7 +91,7 @@ MonoBehaviour:
   m_AvoidObstacles: 1
   m_DistanceLimit: 0
   m_MinimumOcclusionTime: 0
-  m_CameraRadius: 0.35
+  m_CameraRadius: 0.2
   m_Strategy: 1
   m_MaximumEffort: 1
   m_SmoothingTime: 0
@@ -326,8 +326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c38e25db3b41e4fb0498839d2d98b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensivityH: 0.2
-  sensiviryV: 0.1
+  sensivityH: 0.1
+  sensiviryV: 0.05
   xLimit: 60
   playerRotationSmoothness: 0
 --- !u!114 &836290619443348033
@@ -402,7 +402,7 @@ MonoBehaviour:
   Damping: {x: 0.5, y: 0.5, z: 0.5}
   ShoulderOffset: {x: 0, y: 0.5, z: -0.5}
   VerticalArmLength: 0
-  CameraSide: 1
+  CameraSide: 0.5
   CameraDistance: 4
   CameraCollisionFilter:
     serializedVersion: 2

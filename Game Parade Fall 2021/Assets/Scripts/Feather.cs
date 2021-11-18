@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Feather : MonoBehaviour
+public class Feather : PooledMonoBehaviour
 {
     [SerializeField]
     float rotateSpeed = 5f;
@@ -28,9 +28,9 @@ public class Feather : MonoBehaviour
         renderer = GetComponentInChildren<MeshRenderer>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        defaultY = transform.position.y;
+        defaultY = transform.position.y;       
         SetColor();
     }
 

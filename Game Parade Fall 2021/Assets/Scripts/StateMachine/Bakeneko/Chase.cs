@@ -19,6 +19,7 @@ public class Chase : IState
 
     public void OnEnter()
     {
+        _agent.speed = _moveSpeed;
         if (_target != null)
             _agent.SetDestination(_target.position);
         else

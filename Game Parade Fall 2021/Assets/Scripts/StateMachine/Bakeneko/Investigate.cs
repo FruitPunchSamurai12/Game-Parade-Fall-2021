@@ -21,7 +21,8 @@ public class Investigate : IState
 
     public void OnEnter()
     {
-        _target = GameManager.Instance.PlayerTransform.position;
+        _agent.speed = _moveSpeed;
+        _target = Director.Instance.LastInterestingLocation;
         _timer = 0;
         _agent.SetDestination(_target);
     }

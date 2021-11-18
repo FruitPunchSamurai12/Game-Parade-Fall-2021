@@ -20,6 +20,7 @@ public class Suspicious : IState
     {       
         _timer = 0;
         _agent.isStopped = true;
+        _target = Director.Instance.LastInterestingLocation;
     }
 
     public void OnExit()
@@ -30,7 +31,6 @@ public class Suspicious : IState
     public void Tick()
     {
         _timer += Time.deltaTime;
-        _target = GameManager.Instance.PlayerTransform.position;
         Vector3 targetDirection = _target - _agent.transform.position;
         Vector3 newDirection = Vector3.RotateTowards(_agent.transform.forward, targetDirection, _rotationSpeed * Time.deltaTime, 0.0f);
         _agent.transform.rotation = Quaternion.LookRotation(newDirection);

@@ -1,12 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMarkerPlacer : MonoBehaviour
 {
     [SerializeField]
-    GameObject mark;
+    PooledMonoBehaviour mark;
     [SerializeField]
     float markingDelay = 2f;
     [SerializeField]
@@ -15,6 +15,11 @@ public class PlayerMarkerPlacer : MonoBehaviour
     private void OnEnable()
     {
         InputManager.Actions.Player.Mark.performed += OnMarkPressed;
+    }
+
+    private void OnDisable()
+    {
+        InputManager.Actions.Player.Mark.performed -= OnMarkPressed;
     }
 
     void OnMarkPressed (InputAction.CallbackContext ctx)
@@ -28,9 +33,11 @@ public class PlayerMarkerPlacer : MonoBehaviour
 
         yield return new WaitForSeconds(markingDelay);
 
-        var newMark = Instantiate(mark, transform);
-        newMark.transform.localPosition += markPositionOffset;
-        newMark.transform.parent = null;
+
+        var newMark = mark.Get<PooledMonoBehaviour>(transform.position + markPositionOffset, Quaternion.identity);
+        Director.Instance.NewMarkedPlaced(transform.position + markPositionOffset);
+        //newMark.transform.localPosition += markPositionOffset;
+        //newMark.transform.parent = null;
 
         InputManager.Actions.Player.Enable();
     }

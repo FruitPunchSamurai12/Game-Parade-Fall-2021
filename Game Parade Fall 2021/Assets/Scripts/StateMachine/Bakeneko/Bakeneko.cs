@@ -27,12 +27,45 @@ public class Bakeneko:MonoBehaviour
         _sightRangeSqr = _sightRange * _sightRange;
     }
 
+
     public bool CanSee()
+    {
+        if (CanSeePlayer())
+            return true;
+        if (CanSeeMarks())
+            return true;
+        return false;
+    }
+
+    public bool CanSeeMarks()
+    {
+        Debug.Log("manoules");
+        foreach (var posBool in Director.Instance.MarksPositionsWithCatInvestigationBool)
+        {
+            Debug.Log("mothers " + posBool.Key);
+            if (posBool.Value == true)
+                continue;
+            if (CanSee(posBool.Key))
+            {
+                Debug.Log("manes " + posBool.Key);
+                Director.Instance.MarksPositionsWithCatInvestigationBool[posBool.Key] = true;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool CanSeePlayer()
     {
         _playerTranform = GameManager.Instance.PlayerTransform;
         if (_playerTranform == null)
             return false;
-        Vector3 targetPosition = _playerTranform.transform.position;
+        return CanSee(_playerTranform.position);
+    }
+
+    bool CanSee(Vector3 target)
+    {
+        Vector3 targetPosition = target;
         Vector3 targetDir = targetPosition.FlatVector() - transform.position.FlatVector();
         float angle = Vector3.Angle(targetDir.FlatVector(), _eyes.transform.forward.FlatVector());
         float distanceSqr = targetPosition.FlatVectorDistanceSquared(_eyes.transform.position);
@@ -43,7 +76,7 @@ public class Bakeneko:MonoBehaviour
             Physics.Raycast(_eyes.position, targetDir.normalized, out hit, distance, _obstaclesLayer);
             if (hit.collider == null)
             {
-
+                Director.Instance.CatSawSomething(targetPosition);
                 return true;
             }
             else
@@ -54,6 +87,7 @@ public class Bakeneko:MonoBehaviour
         else
             return false;
     }
+
 
 #if UNITY_EDITOR
     private void OnDrawGizmosSelected()

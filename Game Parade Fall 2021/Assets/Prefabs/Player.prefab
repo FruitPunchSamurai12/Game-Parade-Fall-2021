@@ -193,9 +193,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dabdf64dc0d8cf478e3520569d4043f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mark: {fileID: 4506842334376232532, guid: 658d2adcf18d1104c90166e4119b2aa1, type: 3}
+  mark: {fileID: 4506842334376232533, guid: 658d2adcf18d1104c90166e4119b2aa1, type: 3}
   markingDelay: 2
-  markPositionOffset: {x: 0, y: -0.5, z: 2}
+  markPositionOffset: {x: 0, y: 0.5, z: 2}
 --- !u!114 &-5836124308785226483
 MonoBehaviour:
   m_ObjectHideFlags: 0

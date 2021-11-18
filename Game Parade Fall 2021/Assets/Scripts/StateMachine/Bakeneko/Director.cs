@@ -11,15 +11,17 @@ public class Director : MonoBehaviour
 
     int _previousWaypointIndex=-1;
 
+    public Vector3 LastInterestingLocation { get; private set; }
+    public Dictionary<Vector3, bool> MarksPositionsWithCatInvestigationBool { get; private set; }//i have no clue what to name this
+
     public static Director Instance { get; private set; }
 
     private void Awake()
     {
         if (Instance == null)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+            MarksPositionsWithCatInvestigationBool = new Dictionary<Vector3, bool>();
+            Instance = this;        }
         else
             Destroy(gameObject);
     }
@@ -39,14 +41,32 @@ public class Director : MonoBehaviour
 
     }
 
+    public void NewMarkedPlaced(Vector3 position)
+    {
+        if(MarksPositionsWithCatInvestigationBool.ContainsKey(position))
+        {
+            MarksPositionsWithCatInvestigationBool[position] = false;
+        }
+        else
+        {
+            MarksPositionsWithCatInvestigationBool.Add(position, false);
+        }
+    }
+
     public Vector3 PickInvestigateTarget()
     {
         return _birdCellTracker.closestWaypoint.transform.position;
+    }
+
+    public void CatSawSomething(Vector3 location)
+    {
+        LastInterestingLocation = location;
     }
 
     public void SetCatAndBird(CellTracker cat,CellTracker bird)
     {
         _catCellTracker = cat;
         _birdCellTracker = bird;
+        
     }
 }

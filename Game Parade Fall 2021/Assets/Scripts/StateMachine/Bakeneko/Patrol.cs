@@ -19,6 +19,7 @@ public class Patrol : IState
 
     public void OnEnter()
     {
+        _agent.speed = _moveSpeed;
         _target = Director.Instance.PickRandomPath();
         _agent.SetDestination(_target);
     }

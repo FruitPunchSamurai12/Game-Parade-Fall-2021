@@ -19,12 +19,17 @@ public class AIStateMachine : MonoBehaviour
         var patrol = new Patrol(_agent,_bakeneko.NeutralSpeed);
         var chase = new Chase(_agent, _bakeneko.ChaseSpeed, _bakeneko.CatchDistance);
         var investigate = new Investigate(_agent, _bakeneko.ChaseSpeed, _bakeneko.InvestigationTime);
-        var suspicious = new Suspicious(_agent, _bakeneko.LookRotatioNSpeed, _bakeneko.ReactionTime);
-        _stateMachine.AddTransition(patrol, suspicious, _bakeneko.CanSee);
-        _stateMachine.AddTransition(suspicious, investigate, suspicious.TimeElapsed);
-        _stateMachine.AddTransition(suspicious, investigate, () => _bakeneko.CanSee() == false);
-        _stateMachine.AddTransition(investigate, chase, _bakeneko.CanSee);
-        _stateMachine.AddTransition(chase, investigate,()=>_bakeneko.CanSee()==false);
+        var suspiciousHigh = new Suspicious(_agent, _bakeneko.LookRotatioNSpeed, _bakeneko.ReactionTime);
+        var suspiciousLow = new Suspicious(_agent, _bakeneko.LookRotatioNSpeed, _bakeneko.ReactionTime);
+        _stateMachine.AddTransition(patrol, suspiciousHigh, _bakeneko.CanSeePlayer);
+        _stateMachine.AddTransition(patrol, suspiciousLow, _bakeneko.CanSeeMarks);
+        _stateMachine.AddTransition(suspiciousHigh, investigate, suspiciousHigh.TimeElapsed);
+        _stateMachine.AddTransition(suspiciousHigh, investigate, () => _bakeneko.CanSee() == false);
+        _stateMachine.AddTransition(suspiciousLow, investigate, suspiciousLow.TimeElapsed);
+        _stateMachine.AddTransition(suspiciousLow, suspiciousHigh, _bakeneko.CanSeePlayer);
+        _stateMachine.AddTransition(investigate, chase, _bakeneko.CanSeePlayer);
+        _stateMachine.AddTransition(investigate, suspiciousLow, _bakeneko.CanSeeMarks);
+        _stateMachine.AddTransition(chase, investigate,()=>_bakeneko.CanSeePlayer()==false);
         _stateMachine.AddTransition(investigate, patrol, investigate.SearchedForTooLong);
 
         _stateMachine.SetState(patrol);

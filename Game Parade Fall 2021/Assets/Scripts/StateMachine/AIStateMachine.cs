@@ -38,6 +38,25 @@ public class AIStateMachine : MonoBehaviour
     private void Update()
     {
         _stateMachine.Tick();
-       
+        string CatState = CurrentStateType.ToString();
+        switch (CatState)
+        {
+            case "Patrol":
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CatState", 0f);
+                break;
+            case "Suspicious":
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CatState", 1f);
+                break;
+            case "Investigate":
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CatState", 2f);
+                break;
+            case "Chase":
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CatState", 3f);
+                break;
+            default:
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CatState", 0f);
+                break;
+        }
+
     }
 }

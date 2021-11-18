@@ -23,8 +23,10 @@ public class CameraFollow : MonoBehaviour
 		offset = transform.position - player.position;
 	}
 	
-	void FixedUpdate () 
+	void LateUpdate () 
 	{
-		transform.position = Vector3.Lerp(transform.position, player.position + offset, 1 - followSmoothness);
+        if(player==null)
+            player = GameManager.Instance.PlayerTransform;
+        transform.position = Vector3.Lerp(transform.position, player.position + offset, 1 - followSmoothness);
 	}
 }

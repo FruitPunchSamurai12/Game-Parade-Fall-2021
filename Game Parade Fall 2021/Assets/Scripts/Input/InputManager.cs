@@ -8,14 +8,9 @@ public class InputManager : MonoBehaviour
 
     private void OnEnable()
     {
-        if (Actions == null)
-        {
-            Actions = new InputActions();
-            Actions.Enable();
-        } else
-        {
-            Destroy(this.gameObject);
-        }
+        Actions = new InputActions();
+        Actions.Enable();
+
     }
 
     private void OnDisable()

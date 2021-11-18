@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class GameStateMachine : MonoBehaviour
 {
@@ -32,10 +33,10 @@ public class GameStateMachine : MonoBehaviour
 
         _stateMachine.AddTransition(menu, loading, () => PlayButton.LevelToLoad != null);
         _stateMachine.AddTransition(loading, play, loading.Finished);
-        _stateMachine.AddTransition(play, pause, () => Input.GetKeyDown(KeyCode.Escape));
-        _stateMachine.AddTransition(pause, play, () => Input.GetKeyDown(KeyCode.Escape));
-        _stateMachine.AddTransition(pause, menu, () => RestartButton.Pressed);
-
+       // _stateMachine.AddTransition(play, pause, () => Input.GetKeyDown(KeyCode.Escape));
+       // _stateMachine.AddTransition(pause, play, () => Input.GetKeyDown(KeyCode.Escape));
+        _stateMachine.AddTransition(pause, menu, () => BackToMenuButton.Pressed);
+        _stateMachine.AddTransition(play, menu, () => BackToMenuButton.Pressed);
     }
 
     private void Update()
@@ -49,7 +50,7 @@ public class Menu : IState
     public void OnEnter()
     {
         PlayButton.LevelToLoad = null;
-        SceneManager.LoadSceneAsync("Menu");
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 
     public void OnExit()

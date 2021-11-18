@@ -24,11 +24,6 @@ public class PlayerMovement : MonoBehaviour
 
     new Rigidbody rigidbody;
 
-    private void OnEnable()
-    {
-        InputManager.Actions.Player.Sprint.started += OnSprintStart; 
-        InputManager.Actions.Player.Sprint.canceled += OnSprintEnd;
-    }
 
     private void Awake()
     {
@@ -40,8 +35,19 @@ public class PlayerMovement : MonoBehaviour
         speed = walkSpeed;
         currentStamina = maxStamina;
 
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        InputManager.Actions.Player.Sprint.started += OnSprintStart; 
+        InputManager.Actions.Player.Sprint.canceled += OnSprintEnd;
+
+       Cursor.visible = false;
+       Cursor.lockState = CursorLockMode.Locked;
+        GameManager.Instance.onGameOver += FreeCursorOnGameOver;
+    }
+
+    void FreeCursorOnGameOver()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        GameManager.Instance.onGameOver -= FreeCursorOnGameOver;
     }
 
     private void Update()

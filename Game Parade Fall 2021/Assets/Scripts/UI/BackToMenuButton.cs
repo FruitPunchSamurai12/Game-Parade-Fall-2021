@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RestartButton : Button
+public class BackToMenuButton : Button
 {
-    private static RestartButton _instance;
+    private static BackToMenuButton _instance;
     public static bool Pressed => _instance != null && _instance.IsPressed();
 
     protected override void OnEnable()
@@ -14,3 +14,5 @@ public class RestartButton : Button
         base.OnEnable();
     }
 }
+
+

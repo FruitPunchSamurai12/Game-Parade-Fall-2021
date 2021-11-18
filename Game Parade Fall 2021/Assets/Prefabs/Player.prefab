@@ -176,11 +176,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSprinting: 0
-  walkSpeed: 0.1
-  sprintSpeed: 0.2
+  walkSpeed: 0.12
+  sprintSpeed: 0.19
   maxStamina: 100
   currentStamina: 100
-  staminaCostRate: 0.8
+  staminaCostRate: 0.9
   staminaRegenerateRate: 0.2
 --- !u!114 &292991551827564847
 MonoBehaviour:
@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934a8af7b88de6f4f9f00069a26db1fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateTime: 0.5
 --- !u!1 &7275037938780156073
 GameObject:
   m_ObjectHideFlags: 0

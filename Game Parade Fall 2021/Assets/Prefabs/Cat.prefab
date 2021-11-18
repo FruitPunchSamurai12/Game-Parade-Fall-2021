@@ -246,15 +246,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454f36fe24c14b4429030fcd4564aacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chaseMoveSpeed: 17.5
-  _neutralMoveSpeed: 10
-  _catchDistance: 1
-  _sightRange: 18
-  _sightAngle: 45
+  _chaseMoveSpeed: 9
+  _neutralMoveSpeed: 5
+  _catchDistance: 2
+  _reactionTime: 0.75
+  _investigationTime: 10
+  _sightRange: 40
+  _sightAngle: 60
+  _lookRotationSpeed: 300
+  _feelRadius: 5
   _obstaclesLayer:
     serializedVersion: 2
     m_Bits: 64
   _eyes: {fileID: 165806908340261714}
+  _playfulnessRatio: 0.75
+  _playfulness: 1
+  _playfulnessAmbushThreshold: 0.25
 --- !u!114 &4145144553171264648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,3 +286,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934a8af7b88de6f4f9f00069a26db1fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updateTime: 0.5

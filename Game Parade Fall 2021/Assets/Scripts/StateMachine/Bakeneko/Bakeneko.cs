@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Bakeneko:MonoBehaviour
 {
@@ -10,8 +11,14 @@ public class Bakeneko:MonoBehaviour
     [SerializeField] float _sightRange = 10f;
     [SerializeField] float _sightAngle = 45f;
     [SerializeField] float _lookRotationSpeed = 300f;
+    [SerializeField] float _feelRadius = 5f;
     [SerializeField] LayerMask _obstaclesLayer;
     [SerializeField] Transform _eyes;
+
+    [SerializeField] float _playfulnessRatio = 0.75f;
+    [SerializeField] float _playfulness = 1;
+    [SerializeField][Range(0.1f,0.9f)] float _playfulnessAmbushThreshold = 0.25f;
+
 
     public float NeutralSpeed => _neutralMoveSpeed;
     public float ChaseSpeed => _chaseMoveSpeed;
@@ -19,14 +26,23 @@ public class Bakeneko:MonoBehaviour
     public float ReactionTime => _reactionTime;
     public float InvestigationTime => _investigationTime;
     public float LookRotatioNSpeed => _lookRotationSpeed;
+    public bool WantsToAmbust { get; private set; }
 
     Transform _playerTranform;
     float _sightRangeSqr;
+    float _feelRadiusSqr;
     private void Awake()
     {
         _sightRangeSqr = _sightRange * _sightRange;
+        _feelRadiusSqr = _feelRadius * _feelRadius;
     }
 
+    private void Start()
+    {
+        Director.Instance.onBirdInPinchPoint += TryToAmbush;
+    }
+
+   
 
     public bool CanSee()
     {
@@ -39,15 +55,12 @@ public class Bakeneko:MonoBehaviour
 
     public bool CanSeeMarks()
     {
-        Debug.Log("manoules");
         foreach (var posBool in Director.Instance.MarksPositionsWithCatInvestigationBool)
         {
-            Debug.Log("mothers " + posBool.Key);
             if (posBool.Value == true)
                 continue;
             if (CanSee(posBool.Key))
             {
-                Debug.Log("manes " + posBool.Key);
                 Director.Instance.MarksPositionsWithCatInvestigationBool[posBool.Key] = true;
                 return true;
             }
@@ -88,6 +101,28 @@ public class Bakeneko:MonoBehaviour
             return false;
     }
 
+    bool CanFeel()
+    {
+        _playerTranform = GameManager.Instance.PlayerTransform;
+        if (_playerTranform == null)
+            return false;
+        float distanceSqr = _playerTranform.position.FlatVectorDistanceSquared(transform.position);
+        if(distanceSqr<_feelRadiusSqr)
+        {
+            Director.Instance.CatSawSomething(_playerTranform.position);
+            return true;
+        }
+        return false;
+    }
+
+    void TryToAmbush()
+    {
+        if (_playfulness > _playfulnessAmbushThreshold)
+            WantsToAmbust = true;
+        else
+            WantsToAmbust = false;
+    }
+
 
 #if UNITY_EDITOR
     private void OnDrawGizmosSelected()
@@ -95,6 +130,9 @@ public class Bakeneko:MonoBehaviour
         Color color = new Color(0, 0, 1, 0.25f);
         UnityEditor.Handles.color = color;
         UnityEditor.Handles.DrawSolidArc(_eyes.transform.position, Vector3.up, Quaternion.Euler(0, -_sightAngle, 0) * transform.forward, _sightAngle * 2f, _sightRange);
+        color = new Color(0, 1, 0, 0.25f);
+        UnityEditor.Handles.color = color;
+        UnityEditor.Handles.DrawSolidDisc(transform.position, Vector3.up, _feelRadius);
     }
 #endif
 }

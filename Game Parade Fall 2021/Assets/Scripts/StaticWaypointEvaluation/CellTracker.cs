@@ -8,6 +8,9 @@ public class CellTracker : MonoBehaviour
     public int cellIndex {get; private set;}
     public int closestWaypointIndex{get; private set;}
     public Waypoint closestWaypoint => waypointManager.waypoints[closestWaypointIndex];
+
+    public float updateTime = 0.5f;
+    float updateTimer = 0;
     private void Start()
     {
         waypointManager = FindObjectOfType<WaypointManager>();
@@ -22,21 +25,25 @@ public class CellTracker : MonoBehaviour
         closestWaypointIndex = FindClosestWaypoint().ID;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if(!SpatialPartition.Instance.cells[cellIndex].cellBounds.Contains(transform.position))
+        updateTimer += Time.deltaTime;
+        if (updateTimer > updateTime)
         {
-            for (int i = 0; i < SpatialPartition.Instance.cells[cellIndex].neighboors.Count; i++)
+            if (!SpatialPartition.Instance.cells[cellIndex].cellBounds.Contains(transform.position))
             {
-                if(SpatialPartition.Instance.cells[SpatialPartition.Instance.cells[cellIndex].neighboors[i]].cellBounds.Contains(transform.position))
+                for (int i = 0; i < SpatialPartition.Instance.cells[cellIndex].neighboors.Count; i++)
                 {
-                    cellIndex = SpatialPartition.Instance.cells[cellIndex].neighboors[i];
-                    break;
+                    if (SpatialPartition.Instance.cells[SpatialPartition.Instance.cells[cellIndex].neighboors[i]].cellBounds.Contains(transform.position))
+                    {
+                        cellIndex = SpatialPartition.Instance.cells[cellIndex].neighboors[i];
+                        break;
+                    }
                 }
             }
+            closestWaypointIndex = FindClosestWaypoint().ID;
+            updateTimer = 0;
         }
-        closestWaypointIndex = FindClosestWaypoint().ID;
-
     }
 
     public Waypoint FindClosestWaypoint()

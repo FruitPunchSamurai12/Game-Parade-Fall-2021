@@ -3259,6 +3259,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 836290618623284803, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.5
+      objectReference: {fileID: 0}
     - target: {fileID: 836290618928106038, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
       propertyPath: m_Name
       value: Camera
@@ -3308,12 +3312,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 836290619142312514, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 836290619142312514, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.7599983
+      value: -5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 836290620634940168, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
+      propertyPath: CameraDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6995962886461901012, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
+      propertyPath: sensiviryV
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6995962886461901012, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
+      propertyPath: sensivityH
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}

@@ -205,8 +205,8 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   SwitchSettingsMigration: 1
-  HasSourceProject: 1
-  HasPlatforms: 1
+  HasSourceProject: 0
+  HasPlatforms: 0
   sourceProjectPath: ../../../FMOD Studio/tet/test/test.fspro
   sourceBankPath: ../../../FMOD Studio/tet/test/Build
   SourceBankPathUnformatted: 

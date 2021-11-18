@@ -4963,6 +4963,7 @@ MonoBehaviour:
   - {fileID: 686065311}
   - {fileID: 1625043501}
   - {fileID: 1965931739}
+  waypointManager: {fileID: 2003284776}
 --- !u!4 &2083426981
 Transform:
   m_ObjectHideFlags: 0

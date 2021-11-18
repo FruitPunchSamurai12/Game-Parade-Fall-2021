@@ -46,7 +46,5 @@ public class Ambush : IState
             Vector3 newDirection = Vector3.RotateTowards(_agent.transform.forward, targetDirection, _rotationSpeed * Time.deltaTime, 0.0f);
             _agent.transform.rotation = Quaternion.LookRotation(newDirection);
         }
-        else
-            Debug.LogError("Target is null");
     }
 }

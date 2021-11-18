@@ -101,7 +101,7 @@ public class Bakeneko:MonoBehaviour
             return false;
     }
 
-    bool CanFeel()
+    public bool CanFeel()
     {
         _playerTranform = GameManager.Instance.PlayerTransform;
         if (_playerTranform == null)

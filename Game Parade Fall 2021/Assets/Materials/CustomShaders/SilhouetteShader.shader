@@ -13,6 +13,7 @@ Shader "Custom/SilhouetteShader"
      
              Pass
              {
+                 Blend SrcAlpha OneMinusSrcAlpha
                  ZWrite Off
                  ZTest Greater
                  Lighting Off

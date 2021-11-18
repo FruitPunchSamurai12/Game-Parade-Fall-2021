@@ -48,6 +48,8 @@ MonoBehaviour:
   floatSpeed: 4
   floatHeight: 0.1
   colorAffectionDistance: 100
+  alphaReductionStrength: 0.035
+  alphaReductionDistance: 35
 --- !u!1 &4506842335765438454
 GameObject:
   m_ObjectHideFlags: 0

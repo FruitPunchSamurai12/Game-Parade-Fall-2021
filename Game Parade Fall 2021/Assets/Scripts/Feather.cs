@@ -12,6 +12,10 @@ public class Feather : MonoBehaviour
     float floatHeight = 2f;
     [SerializeField]
     float colorAffectionDistance = 100f;
+    [SerializeField]
+    float alphaReductionStrength = 0.05f;
+    [SerializeField]
+    float alphaReductionDistance = 25f;
 
     float defaultY = 0f;
 
@@ -27,12 +31,23 @@ public class Feather : MonoBehaviour
     private void Start()
     {
         defaultY = transform.position.y;
-        ColorCorrection();
+        SetColor();
     }
 
     private void Update()
     {
         FloatAndRotate();
+        AlphaCorrection();
+    }
+
+    void SetColor()
+    {
+        var distance = Vector3.Distance(transform.position, GameManager.Instance.ExitPoint.position);
+        if (distance < colorAffectionDistance)
+        {
+            var newColor = new Color(0f, (colorAffectionDistance - distance) * 1f / colorAffectionDistance, 0f);
+            for (int i = 0; i < renderer.materials.Length; i++) renderer.materials[i].color = newColor;
+        }
     }
 
     void FloatAndRotate ()
@@ -43,13 +58,15 @@ public class Feather : MonoBehaviour
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }
 
-    void ColorCorrection ()
+    void AlphaCorrection ()
     {
-        var distance = Vector3.Distance(transform.position, GameManager.Instance.ExitPoint.position);
-        if (distance < colorAffectionDistance)
+        var distance = Vector3.Distance(transform.position, GameManager.Instance.PlayerTransform.position);
+        if (distance > alphaReductionDistance)
         {
-            var newColor = new Color(0f, (colorAffectionDistance - distance) * 1f / colorAffectionDistance, 0f);
-            for (int i = 0; i < renderer.materials.Length; i++) renderer.materials[i].color = newColor;
-        }   
+            var newAlpha = 1f - (distance - alphaReductionDistance) * alphaReductionStrength;
+            var newColor = renderer.materials[1].color;
+            newColor.a = newAlpha;
+            renderer.materials[1].color = newColor;
+        }
     }
 }

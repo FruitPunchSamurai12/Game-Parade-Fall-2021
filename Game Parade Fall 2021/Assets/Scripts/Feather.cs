@@ -30,7 +30,7 @@ public class Feather : PooledMonoBehaviour
 
     private void OnEnable()
     {
-        defaultY = transform.position.y;       
+        defaultY = transform.position.y;  
         SetColor();
     }
 
@@ -39,6 +39,8 @@ public class Feather : PooledMonoBehaviour
         FloatAndRotate();
         AlphaCorrection();
     }
+
+
 
     void SetColor()
     {

@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 995ca08546e314a4daeb0d7707ee43f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialPoolSize: 50
   rotateSpeed: 0.5
   floatSpeed: 4
-  floatHeight: 0.1
+  floatHeight: 0.3
   colorAffectionDistance: 100
   alphaReductionStrength: 0.035
   alphaReductionDistance: 35

@@ -10,7 +10,7 @@ public class PlayerMarkerPlacer : MonoBehaviour
     [SerializeField]
     float markingDelay = 2f;
     [SerializeField]
-    Vector3 markPositionOffset;
+    Transform placementTransform;
 
     private void OnEnable()
     {
@@ -34,8 +34,10 @@ public class PlayerMarkerPlacer : MonoBehaviour
         yield return new WaitForSeconds(markingDelay);
 
 
-        var newMark = mark.Get<PooledMonoBehaviour>(transform.position + markPositionOffset, Quaternion.identity);
-        Director.Instance.NewMarkedPlaced(transform.position + markPositionOffset);
+        var newMark = mark.Get<PooledMonoBehaviour>(false);
+        newMark.transform.position = placementTransform.position;
+        newMark.gameObject.SetActive(true);
+        Director.Instance.NewMarkedPlaced(newMark.transform.position);
         //newMark.transform.localPosition += markPositionOffset;
         //newMark.transform.parent = null;
 

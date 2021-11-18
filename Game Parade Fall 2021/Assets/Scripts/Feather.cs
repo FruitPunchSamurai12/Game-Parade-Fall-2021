@@ -49,7 +49,7 @@ public class Feather : MonoBehaviour
         if (distance < colorAffectionDistance)
         {
             var newColor = new Color(0f, (colorAffectionDistance - distance) * 1f / colorAffectionDistance, 0f);
-            renderer.material.color = newColor;
+            for (int i = 0; i < renderer.materials.Length; i++) renderer.materials[i].color = newColor;
         }   
     }
 }

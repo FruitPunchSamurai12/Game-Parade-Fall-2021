@@ -21,33 +21,33 @@
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
 [LOG] SystemI::createSound                     : filename = FMODBuild/Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000012DDDFE98 : node = 000000006DD853D0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000001288DD488.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000012DDDFE98
+[LOG] SystemI::createSound                     : setdata soundi = 0000000075D8C348 : node = 000000006DA7A680
+[LOG] SystemI::createSound                     : add node to async list : head = 00000001288DCCB8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000075D8C348
 [LOG] SystemI::createSoundInternal             :     Create name='FMODBuild/Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 2653856
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 33792
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006DD854E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006DA7A790
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='layer_CatClose', format=5, channels=2, frequency=48000, lengthbytes=165280, lengthpcm=768001, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.133326.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000012DDDFE98
-[LOG] SoundI::release                          : layer_CatClose (000000007811ED58)
-[LOG] SoundI::release                          :     layer_CatClose (000000007B1A2948)
-[LOG] SoundI::release                          :     layer_CatClose (000000007811F418)
-[LOG] SoundI::release                          : layer_CatClose (000000012DDDFE98)
-[LOG] SoundI::release                          :     layer_CatClose (000000007B1A2FC8)
-[LOG] SoundI::release                          :     layer_CatClose (00000000781D7998)
-[LOG] SoundI::release                          : AmbientMusic_Calm2 (000000012AF9EA38)
-[LOG] SoundI::release                          :     AmbientMusic_Calm2 (000000007B1A2E28)
-[LOG] SoundI::release                          :     AmbientMusic_Calm2 (000000012AF9EBE8)
-[LOG] SoundI::release                          :  (0000000074E68968)
-[LOG] SoundI::release                          :     V2Chasesegments_FromChaseToSearch3 (000000007B1A2C88)
-[LOG] SoundI::release                          :  (0000000074E680C8)
-[LOG] SoundI::release                          :     dinginvestigate (000000007B1A2AE8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000075D8C348
+[LOG] SoundI::release                          : layer_CatClose (00000000781D72D8)
+[LOG] SoundI::release                          :     layer_CatClose (0000000128AC5A68)
+[LOG] SoundI::release                          :     layer_CatClose (00000000781D7CF8)
+[LOG] SoundI::release                          : layer_CatClose (0000000075D8C348)
+[LOG] SoundI::release                          :     layer_CatClose (0000000128AC6AA8)
+[LOG] SoundI::release                          :     layer_CatClose (000000007811F0B8)
+[LOG] SoundI::release                          : AmbientMusic_Calm1 (000000012AF9EBE8)
+[LOG] SoundI::release                          :     AmbientMusic_Calm1 (0000000128AC5F48)
+[LOG] SoundI::release                          :     AmbientMusic_Calm1 (000000012AF9EA38)
+[LOG] SoundI::release                          :  (0000000074E68DB8)
+[LOG] SoundI::release                          :     V2Chasesegments_FromChaseToSearch3 (0000000128AC5DA8)
+[LOG] SoundI::release                          :  (0000000074E68518)
+[LOG] SoundI::release                          :     dinginvestigate (0000000128AC5C08)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients

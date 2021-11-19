@@ -26,7 +26,6 @@ public class Patrol : IState
 
     public void OnExit()
     {
-        
     }
 
     public void Tick()

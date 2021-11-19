@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CatAnimator : MonoBehaviour
 {
     Animator _animator;
+    NavMeshAgent _agent;
     AIStateMachine _catStateMachine;
     [SerializeField] string _patrolTrigger;
     [SerializeField] string _suspiciousTrigger;
@@ -14,8 +16,9 @@ public class CatAnimator : MonoBehaviour
 
     private void Awake()
     {
-        _animator = GetComponentInChildren<Animator>();
-        _catStateMachine = GetComponent<AIStateMachine>();
+        _agent = GetComponentInParent<NavMeshAgent>();
+        _animator = GetComponent<Animator>();
+        _catStateMachine = GetComponentInParent<AIStateMachine>();
         _catStateMachine.OnAIStateChanged += HandleCatStateChanged;
     }
 
@@ -66,5 +69,15 @@ public class CatAnimator : MonoBehaviour
     public void SetTrigger(string trigger)
     {
         _animator.SetTrigger(trigger);
+    }
+
+    public void AnimationStartMove()
+    {
+        _agent.isStopped=false;
+    }
+
+    public void AnimationStopMove()
+    {
+        _agent.isStopped = true;
     }
 }

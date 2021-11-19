@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     Transform spawnCatPos;
+
+
+
     [SerializeField]
     Transform spawnPlayerPos;
     [SerializeField]
@@ -29,8 +32,10 @@ public class GameManager : MonoBehaviour
 
 
     public event Action onBirdCaught;
+    public event Action onBirdReset;
     public event Action onGameOver;
 
+    bool _birdCaught = false;
     public static GameManager Instance { get; private set; } 
 
     private void Awake()
@@ -52,20 +57,29 @@ public class GameManager : MonoBehaviour
 
     public void BirdGotCaught()
     {
+        if (_birdCaught)
+            return;
         currentBirdLives--;
         if(currentBirdLives<=0)
         {
+            _birdCaught = true;
             onGameOver?.Invoke();
         }
         else
         {
+            _birdCaught = true;
             onBirdCaught?.Invoke();
         }
     }
 
+    public void ResetBird()
+    {
+        onBirdReset?.Invoke();
+    }
 
     public void RespawnBird(Checkpoint currentCheckpoint)
     {
+        _birdCaught = false;
         Bird.GetComponent<CellTracker>().Teleport(currentCheckpoint.transform.position);
         Director.Instance.TeleportCat(currentCheckpoint.waypointToTeleportCatAfterItCatchesTheBird);
     }

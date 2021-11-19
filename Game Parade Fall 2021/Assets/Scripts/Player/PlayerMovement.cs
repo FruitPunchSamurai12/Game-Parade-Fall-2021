@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     new Rigidbody rigidbody;
 
+    bool _restrictMovement = false;
 
     private void Awake()
     {
@@ -41,13 +42,21 @@ public class PlayerMovement : MonoBehaviour
        Cursor.visible = false;
        Cursor.lockState = CursorLockMode.Locked;
         GameManager.Instance.onGameOver += FreeCursorOnGameOver;
+        GameManager.Instance.onBirdCaught += RestrictMovement;
+        GameManager.Instance.onBirdReset += AllowMovement;
     }
+
+    void RestrictMovement() { _restrictMovement = true; }
+    void AllowMovement() { _restrictMovement = false; }
+
 
     void FreeCursorOnGameOver()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         GameManager.Instance.onGameOver -= FreeCursorOnGameOver;
+        GameManager.Instance.onBirdCaught -= RestrictMovement;
+        GameManager.Instance.onBirdReset -= AllowMovement;
     }
 
     private void Update()
@@ -57,6 +66,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (_restrictMovement)
+            return;
         ApplyMovement();
     }
 

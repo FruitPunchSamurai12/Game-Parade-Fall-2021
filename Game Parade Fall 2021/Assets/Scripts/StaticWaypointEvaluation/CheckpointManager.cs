@@ -15,10 +15,10 @@ public class CheckpointManager : MonoBehaviour
             checkpoint.onCheckpointTrigger += SetCurrentCheckpoint;
         }
         CurrentCheckpoint = _checkpoints[0];
-        GameManager.Instance.onBirdCaught += HandleBirdCaught;
+        GameManager.Instance.onBirdReset += HandleBirdReset;
     }
 
-    private void HandleBirdCaught()
+    private void HandleBirdReset()
     {
         GameManager.Instance.RespawnBird(CurrentCheckpoint);
     }
@@ -29,6 +29,7 @@ public class CheckpointManager : MonoBehaviour
         {
             checkpoint.onCheckpointTrigger -= SetCurrentCheckpoint;
         }
+        GameManager.Instance.onBirdReset -= HandleBirdReset;
     }
 
     void SetCurrentCheckpoint(Checkpoint checkpoint) { CurrentCheckpoint = checkpoint; }

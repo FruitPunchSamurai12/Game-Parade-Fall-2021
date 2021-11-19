@@ -56,7 +56,6 @@ public class GameManager : MonoBehaviour
         if(currentBirdLives<=0)
         {
             onGameOver?.Invoke();
-            Debug.Log("Game over");
         }
         else
         {

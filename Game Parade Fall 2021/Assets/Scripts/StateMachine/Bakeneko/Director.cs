@@ -72,6 +72,7 @@ public class Director : MonoBehaviour
 
     public Vector3 PickInvestigateTarget()
     {
+        Debug.Log($"assigning new target {_birdCellTracker.closestWaypoint.transform.position}");
         return _birdCellTracker.closestWaypoint.transform.position;
     }
 

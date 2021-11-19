@@ -25,7 +25,7 @@ public class AIStateMachine : MonoBehaviour
         var suspiciousHigh = new Suspicious(_agent, _bakeneko.LookRotatioNSpeed, _bakeneko.ReactionTime);
         var suspiciousLow = new Suspicious(_agent, _bakeneko.LookRotatioNSpeed, _bakeneko.ReactionTime);
         _stateMachine.AddTransition(_patrol, suspiciousHigh, _bakeneko.CanSeePlayer);
-        _stateMachine.AddTransition(_patrol, suspiciousHigh, _bakeneko.CanFeel);
+        _stateMachine.AddTransition(_patrol, suspiciousLow, _bakeneko.CanFeel);
         _stateMachine.AddTransition(_patrol, suspiciousLow, _bakeneko.CanSeeMarks);
         _stateMachine.AddTransition(suspiciousHigh, investigate, suspiciousHigh.TimeElapsed);
         _stateMachine.AddTransition(suspiciousHigh, investigate, () => _bakeneko.CanSee() == false && _bakeneko.CanFeel() == false);

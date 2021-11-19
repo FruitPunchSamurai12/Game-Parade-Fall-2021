@@ -38,6 +38,7 @@ public class Investigate : IState
         if (_agent.transform.position.FlatVectorDistanceSquared(_target) < _stoppingDistanceSqr)
         {
             _target = Director.Instance.PickInvestigateTarget();
+            _agent.SetDestination(_target);
         }
     }
 

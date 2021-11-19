@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Collections; 
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
 public class CameraEffects : MonoBehaviour
 {
+    [Header("Vignette")]
     [SerializeField]
     Volume volume;
     [SerializeField]
@@ -13,16 +13,26 @@ public class CameraEffects : MonoBehaviour
     [SerializeField]
     float vignetteTakeoverSpeed = 0.1f;
 
+    [Header("Camera Shake")]
+    [SerializeField]
+    float shakeMagnitude = 1f;
+    [SerializeField]
+    float shakeDuration = 1f;
+    [SerializeField]
+    float shakeStartDistance = 30f;
+    [SerializeField]
+    float shakeIncreaseStrength = 0.005f;
+
     Vignette vignette;
 
     private void OnEnable()
     {
-        GameManager.Instance.onBirdCaught += ResetVignette;
+        GameManager.Instance.onBirdReset += ResetVignette;
     }
 
     private void OnDisable()
     {
-        GameManager.Instance.onBirdCaught -= ResetVignette;
+        GameManager.Instance.onBirdReset -= ResetVignette;
     }
 
     private void Start()
@@ -33,6 +43,7 @@ public class CameraEffects : MonoBehaviour
     private void Update()
     {
         DangerVignette();
+        // ShakeStrengthFix();
     }
 
     void DangerVignette ()

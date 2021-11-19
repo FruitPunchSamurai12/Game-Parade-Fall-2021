@@ -74,7 +74,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836290618623284801}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: -4.5}
+  m_LocalPosition: {x: -0.22859454, y: 0.11216104, z: -4.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 836290620634940175}
@@ -175,7 +175,7 @@ Transform:
   m_Children:
   - {fileID: 836290619142312514}
   - {fileID: 836290618623284803}
-  - {fileID: 836290619443348034}
+  - {fileID: 2882438438933049999}
   - {fileID: 1881906316}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -208,7 +208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836290619142312519}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: -4.5}
+  m_LocalPosition: {x: -0.22859454, y: 0.11216104, z: -4.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 836290618928106039}
@@ -347,10 +347,9 @@ GameObject:
   m_Component:
   - component: {fileID: 836290619443348034}
   - component: {fileID: 6995962886461901012}
-  - component: {fileID: 836290619443348033}
   - component: {fileID: 1632318926}
   m_Layer: 0
-  m_Name: CameraTarget
+  m_Name: CameraController
   m_TagString: CameraTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,11 +363,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836290619443348032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.2285946, y: -0.38783896, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 836290618928106039}
-  m_RootOrder: 2
+  m_Father: {fileID: 2882438438933049999}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6995962886461901012
 MonoBehaviour:
@@ -386,19 +385,6 @@ MonoBehaviour:
   sensiviryV: 0.05
   xLimit: 60
   playerRotationSmoothness: 0
---- !u!114 &836290619443348033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 836290619443348032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9abc55740c384c940b2f3e1aaf2fac36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  followSmoothness: 0.2
 --- !u!114 &1632318926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,6 +400,8 @@ MonoBehaviour:
   volume: {fileID: 1881906315}
   vignetteStartDistance: 30
   vignetteTakeoverSpeed: 0.025
+  shakeMagnitude: 0.35
+  shakeDuration: 0.1
 --- !u!1 &836290620634940174
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,3 +468,48 @@ MonoBehaviour:
     m_Bits: 0
   IgnoreTag: 
   CameraRadius: 0.2
+--- !u!1 &8418106543841974343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2882438438933049999}
+  - component: {fileID: 3847349002439221372}
+  m_Layer: 0
+  m_Name: CameraHandle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2882438438933049999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8418106543841974343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 836290619443348034}
+  m_Father: {fileID: 836290618928106039}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3847349002439221372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8418106543841974343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9abc55740c384c940b2f3e1aaf2fac36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followSmoothness: 0.2

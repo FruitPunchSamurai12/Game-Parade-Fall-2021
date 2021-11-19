@@ -14,6 +14,8 @@ public class CatAnimator : MonoBehaviour
     [SerializeField] string _investigateTrigger;
     [SerializeField] string _chaseTrigger;
 
+    public static event Action onStep;
+
     private void Awake()
     {
         _agent = GetComponentInParent<NavMeshAgent>();
@@ -79,5 +81,10 @@ public class CatAnimator : MonoBehaviour
     public void AnimationStopMove()
     {
         _agent.isStopped = true;
+    }
+
+    public void Footstep ()
+    {
+        onStep.Invoke();
     }
 }

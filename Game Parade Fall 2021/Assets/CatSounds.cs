@@ -5,6 +5,17 @@ using UnityEngine;
 public class CatSounds : MonoBehaviour
 {
     private FMOD.Studio.EventInstance CatDial;
+
+    private void OnEnable()
+    {
+        CatAnimator.onStep += PlayStepSound;
+    }
+
+    private void OnDisable()
+    {
+        CatAnimator.onStep -= PlayStepSound;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +28,11 @@ public class CatSounds : MonoBehaviour
     void Update()
     {
         CatDial.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+    }
+
+    void PlayStepSound ()
+    {
+        // Play step sounds
+        // why I wrote that comment? the method's title literally says Play Step Sound... damn
     }
 }

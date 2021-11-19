@@ -43,7 +43,6 @@ public class CameraEffects : MonoBehaviour
     private void Update()
     {
         DangerVignette();
-        // ShakeStrengthFix();
     }
 
     void DangerVignette ()

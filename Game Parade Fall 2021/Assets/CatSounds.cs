@@ -28,11 +28,13 @@ public class CatSounds : MonoBehaviour
     void Update()
     {
         CatDial.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        CatFootsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
     }
 
     void PlayStepSound ()
     {
-        // Play step sounds
-        // why I wrote that comment? the method's title literally says Play Step Sound... damn
+        CatFootsteps = FMODUnity.RuntimeManager.CreateInstance("event:/CatFootsteps");
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(CatDial, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        CatFootsteps.start();
     }
 }

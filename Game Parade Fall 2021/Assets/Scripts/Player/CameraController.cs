@@ -5,6 +5,8 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField]
+    bool invertedXRot = false;
+    [SerializeField]
     float sensivityH = 0.5f;
     [SerializeField]
     float sensiviryV = 0.5f;
@@ -47,7 +49,9 @@ public class CameraController : MonoBehaviour
         xRot += mouseInput.y;
         xRot = Mathf.Clamp(xRot, -xLimit, xLimit);
 
-        transform.localEulerAngles = new Vector3(xRot, yRot, 0f);
+        var fixedXRot = invertedXRot ? xRot : -xRot;
+
+        transform.localEulerAngles = new Vector3(fixedXRot, yRot, 0f);
 
         // Make player face camera forward direction while moving
         var playerRotation = new Vector3(0f, transform.transform.rotation.eulerAngles.y, 0f);

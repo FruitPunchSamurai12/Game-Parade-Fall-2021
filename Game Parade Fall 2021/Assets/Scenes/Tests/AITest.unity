@@ -3356,22 +3356,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1632318926, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
-      propertyPath: shakeDuration
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632318926, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
-      propertyPath: shakeMagnitude
-      value: 0.002
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632318926, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
-      propertyPath: shakeStartDistance
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632318926, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
-      propertyPath: shakeIncreaseStrength
-      value: 0.001
-      objectReference: {fileID: 0}
     - target: {fileID: 836290618928106038, guid: dc9acc2f7aeb08a46a03ad90cf597f9d, type: 3}
       propertyPath: m_Name
       value: Camera

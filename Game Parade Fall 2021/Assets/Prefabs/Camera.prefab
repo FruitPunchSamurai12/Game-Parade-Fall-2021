@@ -381,6 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c38e25db3b41e4fb0498839d2d98b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invertedXRot: 0
   sensivityH: 0.1
   sensiviryV: 0.05
   xLimit: 60
@@ -400,8 +401,10 @@ MonoBehaviour:
   volume: {fileID: 1881906315}
   vignetteStartDistance: 30
   vignetteTakeoverSpeed: 0.025
-  shakeMagnitude: 0.35
-  shakeDuration: 0.1
+  shakeMagnitude: 0.002
+  shakeDuration: 0.2
+  shakeStartDistance: 30
+  shakeIncreaseStrength: 0.001
 --- !u!1 &836290620634940174
 GameObject:
   m_ObjectHideFlags: 0

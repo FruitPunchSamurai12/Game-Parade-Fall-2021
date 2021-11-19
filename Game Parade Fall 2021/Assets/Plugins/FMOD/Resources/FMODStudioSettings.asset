@@ -208,7 +208,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: ../../../FMOD Studio/tet/test/test.fspro
-  sourceBankPath: ../../../FMOD Studio/tet/test/Build
+  sourceBankPath: FMODBuild/Desktop
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

@@ -23,6 +23,7 @@ public class CameraEffects : MonoBehaviour
     void DangerVignette ()
     {
         var distance = Vector3.Distance(GameManager.Instance.PlayerTransform.position, GameManager.Instance.CatTransform.position);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CatDistance", distance);
         if (distance < vignetteStartDistance)
         {
             volume.profile.TryGet(out vignette);

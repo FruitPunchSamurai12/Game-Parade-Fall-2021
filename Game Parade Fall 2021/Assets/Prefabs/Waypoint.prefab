@@ -43,6 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
-  linksToOtherWaypoints: 
-  exposure: 0
+  ID: 2

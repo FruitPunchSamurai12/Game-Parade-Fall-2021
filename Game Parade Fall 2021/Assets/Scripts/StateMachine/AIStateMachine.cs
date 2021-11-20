@@ -41,23 +41,14 @@ public class AIStateMachine : MonoBehaviour
         _stateMachine.SetState(_patrol);
     }
 
-    private void Start()
-    {
-        //Director.Instance.onBirdSwitchedAreas+=HandleBirdSwitchedArea
-    }
+ 
 
-    private void HandleBirdSwitchedArea()
-    {
-        if(CurrentStateType.ToString()=="Patrol")
-        {
-
-        }
-    }
-
-    public void ResetStateMachine()
+    public void ResetStateMachine(PatrolRoute patrolRoute)
     {
         _stateMachine.SetState(_patrol);
+        _patrol.AssignNewRoute(patrolRoute);
     }
+
 
     private void Update()
     {

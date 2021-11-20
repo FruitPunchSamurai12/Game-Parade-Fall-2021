@@ -5,19 +5,15 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class Director : MonoBehaviour
-{
-    [SerializeField] Transform[] _waypoints;
-    [SerializeField] WaypointManager waypointManager;
+{ 
+    GameObject _cat;
+    GameObject _bird;
 
-    CellTracker _catCellTracker;
-    CellTracker _birdCellTracker;
-
-    int _previousWaypointIndex=-1;
+    [SerializeField] int _currentCatAreaID;
+    int _currentBirdAreaID;
 
     public Vector3 LastInterestingLocation { get; private set; }
     public Dictionary<Vector3, bool> MarksPositionsWithCatInvestigationBool { get; private set; }//i have no clue what to name this
-
-   
 
     public event Action onBirdInPinchPoint;
     public event Action onBirdSwitchedAreas;
@@ -35,28 +31,10 @@ public class Director : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void Update()
+
+    public PatrolRoute PickRandomRoute()
     {
-        if(_birdCellTracker!=null)
-        {
-            waypointManager.waypointEvaluation.IsWaypointAPinchPoint(_birdCellTracker.closestWaypointIndex);
-            onBirdInPinchPoint?.Invoke();
-        }
-    }
-
-    public Vector3 PickRandomPath()
-    {
-        int random = Random.Range(0, _waypoints.Length);
-        if(random==_previousWaypointIndex)
-        {
-            random++;
-            if (random >= _waypoints.Length)
-                random = 0;
-        }
-
-        _previousWaypointIndex = random;
-        return _waypoints[random].position;
-
+        return WaypointManager.Instance.GetRandomRoute(_currentBirdAreaID);
     }
 
     public void NewMarkedPlaced(Vector3 position)
@@ -73,8 +51,7 @@ public class Director : MonoBehaviour
 
     public Vector3 PickInvestigateTarget()
     {
-        Debug.Log($"assigning new target {_birdCellTracker.closestWaypoint.transform.position}");
-        return _birdCellTracker.closestWaypoint.transform.position;
+       return WaypointManager.Instance.GetInvestigateWaypoint(_currentBirdAreaID,_bird.transform.position);
     }
 
     public void CatSawSomething(Vector3 location)
@@ -82,30 +59,27 @@ public class Director : MonoBehaviour
         LastInterestingLocation = location;
     }
 
-    public void PlayerChangedArea(Waypoint catTeleportWaypoint)
+    public void PlayerChangedArea(int newAreaID,PatrolRoute catPatrolRoute)
     {
-        TeleportCat(catTeleportWaypoint);
+        _currentBirdAreaID = newAreaID;
+        _currentCatAreaID = newAreaID;
+        _cat.GetComponent<AIStateMachine>().ResetStateMachine(catPatrolRoute);
     }
 
-    public void TeleportCat(Waypoint waypoint)
-    {
-        _catCellTracker.Teleport(waypoint.transform.position);
-        _catCellTracker.GetComponent<AIStateMachine>().ResetStateMachine();
-    }
 
-    public void SetCatAndBird(CellTracker cat,CellTracker bird)
+    public void SetCatAndBird(GameObject cat, GameObject bird)
     {
-        _catCellTracker = cat;
-        _birdCellTracker = bird;
+        _cat = cat;
+        _bird = bird;
         
     }
 
-
+/*
     public bool GetAmbushAndLookPoint(out Vector3 ambushPosition, out Vector3 lookAtPosition)
     {
         ambushPosition = new Vector3();
         lookAtPosition = new Vector3();
-        if (_birdCellTracker == null || _catCellTracker == null) return false;
+        if (_bird == null || _cat == null) return false;
         var pp = GetAmbushPinchPoint();
         if (pp == null) return false;
         lookAtPosition = waypointManager.waypoints[pp.OutsideID].transform.position;
@@ -126,8 +100,10 @@ public class Director : MonoBehaviour
 
     PinchPoint GetAmbushPinchPoint()
     {
-        if (_birdCellTracker == null) return null;
-        var pp = waypointManager.waypointEvaluation.IsWaypointAPinchPoint(_birdCellTracker.closestWaypointIndex);
+        return null;
+        if (_bird == null) return null;
+        var pp = waypointManager.waypointEvaluation.IsWaypointAPinchPoint(_bird.closestWaypointIndex);
         return pp;
-    }
+    }*/
 }
+

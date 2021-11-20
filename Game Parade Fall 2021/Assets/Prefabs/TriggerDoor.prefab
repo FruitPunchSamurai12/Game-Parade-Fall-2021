@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7827505632194935985}
   - component: {fileID: 5601527547099638356}
+  - component: {fileID: 1911897094593226005}
   m_Layer: 0
   m_Name: TriggerDoor
   m_TagString: Untagged
@@ -44,3 +45,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12, y: 6, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1911897094593226005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4760435151864938898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adbb435d48453943ad3ab9de42098d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frontAreaID: 1
+  _frontAreaCatPatrolRoute:
+    _routeWaypoints: []
+  _backAreaID: 0
+  _backAreaCatPatrolRoute:
+    _routeWaypoints: []

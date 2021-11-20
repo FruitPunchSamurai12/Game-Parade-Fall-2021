@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
     {
         _birdCaught = false;
         Bird.transform.position = currentCheckpoint.transform.position;
-        Director.Instance.PlayerChangedArea(currentCheckpoint.CatNewAreaID,currentCheckpoint._patrolRouteForCatAfterItCatchesBird);
+        Director.Instance.PlayerReset(currentCheckpoint.AreaID,currentCheckpoint.CatNewAreaID);
     }
 
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
+    public int AreaID;
     public int CatNewAreaID;
-    public PatrolRoute _patrolRouteForCatAfterItCatchesBird = new PatrolRoute();
     public event Action<Checkpoint> onCheckpointTrigger;
 
     BoxCollider _col;

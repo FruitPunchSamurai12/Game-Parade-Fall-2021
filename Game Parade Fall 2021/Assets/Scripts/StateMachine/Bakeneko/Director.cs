@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using Random = UnityEngine.Random;
 
 public class Director : MonoBehaviour
 { 
     GameObject _cat;
     GameObject _bird;
+    PlayerMovement _birdMovement;
 
     [SerializeField] int _currentCatAreaID;
     int _currentBirdAreaID;
@@ -59,6 +61,18 @@ public class Director : MonoBehaviour
         LastInterestingLocation = location;
     }
 
+    public void LostBirdLineOfSight(float predictionTime)
+    {
+        LastInterestingLocation = _bird.transform.position + _birdMovement.Direction * _birdMovement.Speed * predictionTime;
+    }
+
+    public void PlayerReset(int birdAreaID,int catAreaID)
+    {
+        _currentBirdAreaID = birdAreaID;
+        _currentCatAreaID = catAreaID;
+        _cat.GetComponent<AIStateMachine>().ResetStateMachine(WaypointManager.Instance.GetRandomRoute(_currentCatAreaID));
+    }
+
     public void PlayerChangedArea(int newAreaID,PatrolRoute catPatrolRoute)
     {
         _currentBirdAreaID = newAreaID;
@@ -71,39 +85,40 @@ public class Director : MonoBehaviour
     {
         _cat = cat;
         _bird = bird;
-        
+        _birdMovement = _bird.GetComponent<PlayerMovement>();
     }
 
-/*
-    public bool GetAmbushAndLookPoint(out Vector3 ambushPosition, out Vector3 lookAtPosition)
-    {
-        ambushPosition = new Vector3();
-        lookAtPosition = new Vector3();
-        if (_bird == null || _cat == null) return false;
-        var pp = GetAmbushPinchPoint();
-        if (pp == null) return false;
-        lookAtPosition = waypointManager.waypoints[pp.OutsideID].transform.position;
-        float minDistance = float.MaxValue;
-        foreach (var w in pp.ambushPointIDs)
+
+    /*
+        public bool GetAmbushAndLookPoint(out Vector3 ambushPosition, out Vector3 lookAtPosition)
         {
-            Vector3 wPos = waypointManager.waypoints[w].transform.position;
-            float distance = transform.position.FlatVectorDistanceSquared(wPos);
-            if (distance < minDistance)
+            ambushPosition = new Vector3();
+            lookAtPosition = new Vector3();
+            if (_bird == null || _cat == null) return false;
+            var pp = GetAmbushPinchPoint();
+            if (pp == null) return false;
+            lookAtPosition = waypointManager.waypoints[pp.OutsideID].transform.position;
+            float minDistance = float.MaxValue;
+            foreach (var w in pp.ambushPointIDs)
             {
-                ambushPosition = wPos;
-                minDistance = distance;
+                Vector3 wPos = waypointManager.waypoints[w].transform.position;
+                float distance = transform.position.FlatVectorDistanceSquared(wPos);
+                if (distance < minDistance)
+                {
+                    ambushPosition = wPos;
+                    minDistance = distance;
+                }
             }
+            return true;
+
         }
-        return true;
 
-    }
-
-    PinchPoint GetAmbushPinchPoint()
-    {
-        return null;
-        if (_bird == null) return null;
-        var pp = waypointManager.waypointEvaluation.IsWaypointAPinchPoint(_bird.closestWaypointIndex);
-        return pp;
-    }*/
+        PinchPoint GetAmbushPinchPoint()
+        {
+            return null;
+            if (_bird == null) return null;
+            var pp = waypointManager.waypointEvaluation.IsWaypointAPinchPoint(_bird.closestWaypointIndex);
+            return pp;
+        }*/
 }
 

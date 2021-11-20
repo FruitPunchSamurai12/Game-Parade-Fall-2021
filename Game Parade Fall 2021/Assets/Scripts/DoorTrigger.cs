@@ -20,6 +20,7 @@ public class DoorTrigger : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            Debug.Log("passed");
             Vector3 playerDir = transform.position - other.transform.position;
             float dot = Vector3.Dot(transform.forward, playerDir);
             if (dot > 0)

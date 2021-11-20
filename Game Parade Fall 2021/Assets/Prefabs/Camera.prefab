@@ -415,7 +415,7 @@ MonoBehaviour:
   sensivityH: 0.1
   sensiviryV: 0.05
   xLimit: 60
-  playerRotationSmoothness: 0
+  playerRotationSmoothness: 0.8
 --- !u!114 &1632318926
 MonoBehaviour:
   m_ObjectHideFlags: 0

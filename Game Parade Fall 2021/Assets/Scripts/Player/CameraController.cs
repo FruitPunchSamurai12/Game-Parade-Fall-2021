@@ -54,8 +54,9 @@ public class CameraController : MonoBehaviour
         transform.localEulerAngles = new Vector3(fixedXRot, yRot, 0f);
 
         // Make player face camera forward direction while moving
-        var playerRotation = new Vector3(0f, transform.transform.rotation.eulerAngles.y, 0f);
+        var playerRotationEuler = new Vector3(0f, transform.transform.rotation.eulerAngles.y, 0f);
+        var playerRotation = Quaternion.Euler(playerRotationEuler);
         if (movementInput != Vector2.zero)
-            player.rotation = Quaternion.Euler(Vector3.Lerp(player.rotation.eulerAngles, playerRotation, 1 - playerRotationSmoothness));
+            player.rotation = Quaternion.Lerp(player.rotation, playerRotation, 1f - playerRotationSmoothness);
     }
 }

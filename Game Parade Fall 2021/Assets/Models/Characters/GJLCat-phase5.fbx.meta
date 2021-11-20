@@ -27,6 +27,9 @@ ModelImporter:
   - first:
       74: -230682840891556177
     second: Cheshire|Walk_search (1)
+  - first:
+      74: -8200431539219615448
+    second: Cheshire|Chase (1)
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -230,11 +233,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Cheshire|Walk
-      takeName: Cheshire|Walk
+      name: Cheshire|Chase (1)
+      takeName: Cheshire|Chase
       internalID: 0
       firstFrame: 0
-      lastFrame: 60
+      lastFrame: 66
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -261,36 +264,57 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.0041152253
+      - time: 0
         functionName: Footstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.1188822
+      - time: 0.18190159
         functionName: AnimationStartMove
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.49999997
+      - time: 0.27631575
         functionName: AnimationStopMove
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.51083595
+      - time: 0.4697234
         functionName: Footstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.6235551
+      - time: 0.53808725
+        functionName: Footstep
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5875209
+        functionName: Footstep
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.6219987
         functionName: AnimationStartMove
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.9165247
+        functionName: Footstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

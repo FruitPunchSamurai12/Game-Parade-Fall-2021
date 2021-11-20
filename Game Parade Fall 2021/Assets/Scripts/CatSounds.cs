@@ -5,6 +5,7 @@ using UnityEngine;
 public class CatSounds : MonoBehaviour
 {
     private FMOD.Studio.EventInstance CatDial;
+    private FMOD.Studio.EventInstance CatFootsteps;
 
     private void OnEnable()
     {
@@ -20,7 +21,6 @@ public class CatSounds : MonoBehaviour
     void Start()
     {
         CatDial = FMODUnity.RuntimeManager.CreateInstance("event:/CatDial");
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(CatDial, GetComponent<Transform>(), GetComponent<Rigidbody>());
         CatDial.start();
     }
 

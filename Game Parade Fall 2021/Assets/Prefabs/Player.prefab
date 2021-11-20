@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mark: {fileID: 4506842334376232533, guid: 658d2adcf18d1104c90166e4119b2aa1, type: 3}
-  markingDelay: 2
+  markingDelay: 0
   placementTransform: {fileID: 5589671563755990648}
 --- !u!114 &-5836124308785226483
 MonoBehaviour:

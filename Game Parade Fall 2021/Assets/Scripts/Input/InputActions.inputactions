@@ -2,6 +2,33 @@
     "name": "InputActions",
     "maps": [
         {
+            "name": "Global",
+            "id": "2c492582-9fc4-442f-9d5b-9289ce821f10",
+            "actions": [
+                {
+                    "name": "AnyKey",
+                    "type": "Button",
+                    "id": "94038d65-19b0-45bc-8b39-98c674f29f51",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "93bdd844-967b-4a7b-a830-7a11bce74107",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "AnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "Player",
             "id": "13751930-9476-4d9a-b27d-b979c9d40cb4",
             "actions": [

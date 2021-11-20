@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 7275037938626774241}
   - component: {fileID: 292991551827564847}
   - component: {fileID: -5836124308785226483}
+  - component: {fileID: 3176789627600354748}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -118,6 +119,7 @@ MonoBehaviour:
   currentStamina: 100
   staminaCostRate: 0.9
   staminaRegenerateRate: 0.2
+  _restrictMovement: 0
 --- !u!114 &292991551827564847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,8 +132,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dabdf64dc0d8cf478e3520569d4043f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMark: 1
   mark: {fileID: 4506842334376232533, guid: 658d2adcf18d1104c90166e4119b2aa1, type: 3}
   markingDelay: 1
+  delayBetweenMarks: 2
   placementTransform: {fileID: 5589671563755990648}
 --- !u!114 &-5836124308785226483
 MonoBehaviour:
@@ -146,6 +150,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateTime: 0.5
+--- !u!114 &3176789627600354748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7275037938626774247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1a2dfd906549a41a4b0c6ca0aee636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7930582724377539894
 GameObject:
   m_ObjectHideFlags: 0

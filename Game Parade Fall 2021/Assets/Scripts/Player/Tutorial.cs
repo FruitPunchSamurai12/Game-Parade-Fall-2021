@@ -1,26 +1,18 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
 
 public class Tutorial : MonoBehaviour
 {
     [SerializeField]
     float initialDelay = 1f;
     [SerializeField]
-    string movementText = "USE [W][A][S][D] TO MOVE";
+    GameObject movementTutorial;
     [SerializeField]
-    string sprintText = "HOLD [SHIFT] WHILE MOVING TO SPRINT \n WATCH OUT YOUR STAMINA GAUGE";
+    GameObject sprintTutorial;
     [SerializeField]
-    string markText = "PRESS [E] TO PLACE FEATHERS \n USE FEATHERS TO FIND EXIT";
+    GameObject markTutorial;
     [SerializeField]
-    string finishText = "BEWARE THE CAT! AND GOOD LUCK!";
-
-    TextMeshProUGUI textComponent;
-
-    private void Awake()
-    {
-        textComponent = GetComponent<TextMeshProUGUI>();
-    }
+    GameObject finishTutorial;
 
     private void Start()
     {
@@ -33,14 +25,14 @@ public class Tutorial : MonoBehaviour
 
     void Movement ()
     {
-        textComponent.text = movementText;
+        movementTutorial.SetActive(true);
         InputManager.Actions.Player.Movement.Enable();
         InputManager.Actions.Player.Movement.performed += Sprint;
     }
 
     void Sprint (InputAction.CallbackContext ctx)
     {
-        textComponent.text = sprintText;
+        sprintTutorial.SetActive(true); movementTutorial.SetActive(false);
         InputManager.Actions.Player.Sprint.Enable();
         InputManager.Actions.Player.Sprint.performed += Mark;
         InputManager.Actions.Player.Movement.performed -= Sprint;
@@ -48,7 +40,7 @@ public class Tutorial : MonoBehaviour
 
     void Mark (InputAction.CallbackContext ctx)
     {
-        textComponent.text = markText;
+        markTutorial.SetActive(true); sprintTutorial.SetActive(false);
         InputManager.Actions.Player.Mark.Enable();
         InputManager.Actions.Player.Mark.performed += FinishTutorial;
         InputManager.Actions.Player.Sprint.performed -= Mark;
@@ -56,14 +48,14 @@ public class Tutorial : MonoBehaviour
 
     void FinishTutorial (InputAction.CallbackContext ctx)
     {
-        textComponent.text = finishText;
+        finishTutorial.SetActive(true); markTutorial.SetActive(false);
         InputManager.Actions.Global.AnyKey.performed += DisableTutorial;
         InputManager.Actions.Player.Mark.performed -= FinishTutorial;
     }
 
     void DisableTutorial (InputAction.CallbackContext ctx)
     {
-        textComponent.text = "";
+        finishTutorial.SetActive(false);
         InputManager.Actions.Global.AnyKey.performed -= DisableTutorial;
     }
 }

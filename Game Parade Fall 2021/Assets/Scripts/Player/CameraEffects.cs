@@ -1,4 +1,3 @@
-using System.Collections; 
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -13,16 +12,6 @@ public class CameraEffects : MonoBehaviour
     [SerializeField]
     float vignetteTakeoverSpeed = 0.1f;
 
-    [Header("Camera Shake")]
-    [SerializeField]
-    float shakeMagnitude = 1f;
-    [SerializeField]
-    float shakeDuration = 1f;
-    [SerializeField]
-    float shakeStartDistance = 30f;
-    [SerializeField]
-    float shakeIncreaseStrength = 0.005f;
-
     Vignette vignette;
 
     private void OnEnable()
@@ -35,7 +24,7 @@ public class CameraEffects : MonoBehaviour
         GameManager.Instance.onBirdReset -= ResetVignette;
     }
 
-    private void Start()
+    private void Awake ()
     {
         volume.profile.TryGet(out vignette);
     }

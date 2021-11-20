@@ -19,17 +19,14 @@ ModelImporter:
       74: 7861896690060492529
     second: Cheshire|SphereAction
   - first:
-      74: -3403755043212436591
-    second: Cheshire|Walk
+      74: -8200431539219615448
+    second: Cheshire|Chase (1)
   - first:
       74: -5258792203618758686
     second: Cheshire|Walk_search
   - first:
-      74: -230682840891556177
-    second: Cheshire|Walk_search (1)
-  - first:
-      74: -8200431539219615448
-    second: Cheshire|Chase (1)
+      74: -3403755043212436591
+    second: Cheshire|Walk
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -233,8 +230,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Cheshire|Chase (1)
-      takeName: Cheshire|Chase
+      name: Cheshire|Walk
+      takeName: Cheshire|Walk
       internalID: 0
       firstFrame: 0
       lastFrame: 66

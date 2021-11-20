@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Cinemachine;
 
 public class CatAnimator : MonoBehaviour
 {
@@ -16,12 +17,16 @@ public class CatAnimator : MonoBehaviour
 
     public static event Action onStep;
 
+    CinemachineImpulseSource impulseSource;
+
     private void Awake()
     {
         _agent = GetComponentInParent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
         _catStateMachine = GetComponentInParent<AIStateMachine>();
         _catStateMachine.OnAIStateChanged += HandleCatStateChanged;
+
+        impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
     private void OnDestroy()
@@ -85,6 +90,7 @@ public class CatAnimator : MonoBehaviour
 
     public void Footstep ()
     {
+        impulseSource.GenerateImpulse();
         onStep.Invoke();
     }
 }

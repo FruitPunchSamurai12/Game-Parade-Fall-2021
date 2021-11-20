@@ -27,6 +27,9 @@ ModelImporter:
   - first:
       74: -3403755043212436591
     second: Cheshire|Walk
+  - first:
+      74: 5505143166644759163
+    second: Cheshire|Walk (1)
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -197,14 +200,14 @@ ModelImporter:
       curves: []
       events:
       - time: 0
-        functionName: AnimationStopMove
+        functionName: Footstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0
-        functionName: Footstep
+        functionName: AnimationStopMove
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -224,21 +227,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.4697234
-        functionName: Footstep
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.53808725
-        functionName: Footstep
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.5875209
+      - time: 0.44436887
         functionName: Footstep
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -252,23 +241,16 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.9165247
-        functionName: Footstep
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Cheshire|Walk_search
-      takeName: Cheshire|Walk_search
+      name: Cheshire|Walk (1)
+      takeName: Cheshire|Walk
       internalID: 0
       firstFrame: 0
-      lastFrame: 60
+      lastFrame: 66
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -295,7 +277,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.46749228
+      - time: 0.46663097
         functionName: Footstep
         data: 
         objectReferenceParameter: {instanceID: 0}

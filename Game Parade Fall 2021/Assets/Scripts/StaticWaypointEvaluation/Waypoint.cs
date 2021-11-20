@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour,IComparable<Waypoint>
 {
-    public int ID;
+    public int ID = -1;
     public int[] linksToOtherWaypoints;
     public int exposure;
     private void OnValidate()

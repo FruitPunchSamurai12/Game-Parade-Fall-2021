@@ -20,6 +20,7 @@ public class Director : MonoBehaviour
    
 
     public event Action onBirdInPinchPoint;
+    public event Action onBirdSwitchedAreas;
 
     public static Director Instance { get; private set; }
 
@@ -79,6 +80,11 @@ public class Director : MonoBehaviour
     public void CatSawSomething(Vector3 location)
     {
         LastInterestingLocation = location;
+    }
+
+    public void PlayerChangedArea(Waypoint catTeleportWaypoint)
+    {
+        TeleportCat(catTeleportWaypoint);
     }
 
     public void TeleportCat(Waypoint waypoint)

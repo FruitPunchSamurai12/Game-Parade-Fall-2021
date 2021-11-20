@@ -42,7 +42,6 @@ public class Bakeneko:MonoBehaviour
         Director.Instance.onBirdInPinchPoint += TryToAmbush;
     }
 
-   
 
     public bool CanSee()
     {

@@ -14,18 +14,6 @@ public class WaypointEvaluation
 
     public List<PinchPoint> pinchPoints;
 
-    struct WaypointNeighboor
-    {
-        public int ID;
-        public int previousID;
-
-        public WaypointNeighboor(int iD, int previousID)
-        {
-            ID = iD;
-            this.previousID = previousID;
-        }
-    };
-
     public void ClearAllLists()
     {
         pinchPoints.Clear();

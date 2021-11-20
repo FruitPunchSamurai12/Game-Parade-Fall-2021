@@ -171,7 +171,7 @@ public class SpatialPartition : MonoBehaviour
         return closest;
     }
 #if UNITY_EDITOR
-    void OnDrawGizmosSelected()
+    void OnDrawGizmos()
     {
         if (!initialized) return;
         UnityEditor.Handles.color = Color.blue;

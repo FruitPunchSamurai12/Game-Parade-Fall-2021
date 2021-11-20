@@ -88,7 +88,7 @@ public class CatAnimator : MonoBehaviour
         _agent.isStopped = true;
     }
 
-    public void Footstep ()
+    public void Footstep()
     {
         impulseSource.GenerateImpulse();
         onStep.Invoke();

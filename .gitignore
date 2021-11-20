@@ -77,3 +77,9 @@ ehthumbs.db
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/
 Game Parade Fall 2021/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
+
+# FMOD files to ignore
+/[Aa]ssets/Plugins/FMOD/Cache/*
+/[Aa]ssets/StreamingAssets/**/*.bank
+/[Aa]ssets/StreamingAssets/**/*.bank.meta
+fmod_editor.log

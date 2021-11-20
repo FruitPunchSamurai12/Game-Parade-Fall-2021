@@ -24,7 +24,9 @@ public class PlayerMovement : MonoBehaviour
 
     new Rigidbody rigidbody;
 
-    bool _restrictMovement = false;
+    public bool _restrictMovement = false;
+
+    public bool IsSprinting => isSprinting;
 
     private void Awake()
     {
@@ -46,9 +48,8 @@ public class PlayerMovement : MonoBehaviour
         GameManager.Instance.onBirdReset += AllowMovement;
     }
 
-    void RestrictMovement() { _restrictMovement = true; }
-    void AllowMovement() { _restrictMovement = false; }
-
+    public void RestrictMovement() { _restrictMovement = true; }
+    public void AllowMovement() { _restrictMovement = false; }
 
     void FreeCursorOnGameOver()
     {

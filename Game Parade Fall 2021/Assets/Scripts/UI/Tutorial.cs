@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -49,13 +50,13 @@ public class Tutorial : MonoBehaviour
     void FinishTutorial (InputAction.CallbackContext ctx)
     {
         finishTutorial.SetActive(true); markTutorial.SetActive(false);
-        InputManager.Actions.Global.AnyKey.performed += DisableTutorial;
+        StartCoroutine(DisableTutorial());
         InputManager.Actions.Player.Mark.performed -= FinishTutorial;
     }
 
-    void DisableTutorial (InputAction.CallbackContext ctx)
+    IEnumerator DisableTutorial ()
     {
+        yield return new WaitForSeconds(3f);
         finishTutorial.SetActive(false);
-        InputManager.Actions.Global.AnyKey.performed -= DisableTutorial;
     }
 }

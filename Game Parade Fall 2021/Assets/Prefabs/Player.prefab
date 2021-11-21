@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 7275037938626774242}
   - component: {fileID: 7275037938626774241}
   - component: {fileID: 292991551827564847}
+  - component: {fileID: 1100606704611143285}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -135,6 +136,18 @@ MonoBehaviour:
   markingDelay: 2
   delayBetweenMarks: 2
   placementTransform: {fileID: 5589671563755990648}
+--- !u!114 &1100606704611143285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7275037938626774247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1a2dfd906549a41a4b0c6ca0aee636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7930582724377539894
 GameObject:
   m_ObjectHideFlags: 0

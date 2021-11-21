@@ -27,6 +27,9 @@ ModelImporter:
   - first:
       74: 745692338414417878
     second: Owl|Walk_Sidewaysright
+  - first:
+      74: -8589401928770714658
+    second: Owl|Walk_backwards (1)
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -150,14 +153,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.2340423
+      - time: 0.22287327
         functionName: Footstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.7739788
+      - time: 0.62059087
         functionName: Footstep
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -193,14 +196,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.28469616
+      - time: 0.24225387
         functionName: Footstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.75899005
+      - time: 0.6204941
         functionName: Footstep
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -243,7 +246,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.6908421
+      - time: 0.59940434
         functionName: Footstep
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -322,14 +325,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0
+      - time: 0.543487
         functionName: Footstep
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.543487
+      - time: 0.75428146
         functionName: Footstep
         data: 
         objectReferenceParameter: {instanceID: 0}

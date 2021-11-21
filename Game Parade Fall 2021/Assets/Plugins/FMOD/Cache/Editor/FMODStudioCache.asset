@@ -683,6 +683,28 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 1
   Exists: 0
+--- !u!114 &-8182830996800920930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CatDial/CatState
+  m_EditorClassIdentifier: 
+  Name: CatState
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 1
+  Exists: 0
 --- !u!114 &-8167987267254740326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -988,6 +1010,28 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 1
   Exists: 0
+--- !u!114 &-7621321406090556684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/CatDistance
+  m_EditorClassIdentifier: 
+  Name: CatDistance
+  Min: 0
+  Max: 20
+  Default: 20
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 1
+  Exists: 0
 --- !u!114 &-7608133276750187705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1021,6 +1065,28 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Music/CatState
+  m_EditorClassIdentifier: 
+  Name: CatState
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 1
+  Exists: 0
+--- !u!114 &-7427847680121895806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CatDial/CatState
   m_EditorClassIdentifier: 
   Name: CatState
   Min: 0
@@ -1404,6 +1470,28 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Type: 1
+  IsGlobal: 1
+  Exists: 0
+--- !u!114 &-6849999525118500012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/CatDistance
+  m_EditorClassIdentifier: 
+  Name: CatDistance
+  Min: 0
+  Max: 20
+  Default: 20
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
   IsGlobal: 1
   Exists: 0
 --- !u!114 &-6834130867196499064
@@ -1824,6 +1912,28 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 1
   Exists: 1
+--- !u!114 &-6270548534088181961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CatDial/CatState
+  m_EditorClassIdentifier: 
+  Name: CatState
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 1
+  Exists: 0
 --- !u!114 &-6241992248047309932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1910,6 +2020,28 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Type: 0
+  IsGlobal: 1
+  Exists: 0
+--- !u!114 &-6055292929111911789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/CatState
+  m_EditorClassIdentifier: 
+  Name: CatState
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
   IsGlobal: 1
   Exists: 0
 --- !u!114 &-6037861325922762904
@@ -2301,9 +2433,31 @@ MonoBehaviour:
   Path: FMODBuild/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637730085369617850
+  lastModified: 637730807230290382
   FileSizes: []
   Exists: 1
+--- !u!114 &-5406608312105680012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/CatDistance
+  m_EditorClassIdentifier: 
+  Name: CatDistance
+  Min: 0
+  Max: 20
+  Default: 20
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 1
+  Exists: 0
 --- !u!114 &-5387943557531512654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3085,6 +3239,28 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Music/CatState
+  m_EditorClassIdentifier: 
+  Name: CatState
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 1
+  Exists: 0
+--- !u!114 &-4016948238053545314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CatDial/CatState
   m_EditorClassIdentifier: 
   Name: CatState
   Min: 0
@@ -3974,6 +4150,28 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 1
   Exists: 0
+--- !u!114 &-2187488458363479312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/CatDistance
+  m_EditorClassIdentifier: 
+  Name: CatDistance
+  Min: 0
+  Max: 20
+  Default: 20
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 1
+  Exists: 0
 --- !u!114 &-2123669287060594019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4280,6 +4478,28 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Type: 1
+  IsGlobal: 1
+  Exists: 0
+--- !u!114 &-1752942675001218062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/CatDistance
+  m_EditorClassIdentifier: 
+  Name: CatDistance
+  Min: 0
+  Max: 20
+  Default: 20
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
   IsGlobal: 1
   Exists: 0
 --- !u!114 &-1732090275822410767
@@ -4700,6 +4920,28 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 1
   Exists: 1
+--- !u!114 &-1248203801943416649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/CatDistance
+  m_EditorClassIdentifier: 
+  Name: CatDistance
+  Min: 0
+  Max: 20
+  Default: 20
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 1
+  Exists: 0
 --- !u!114 &-1227483387492645934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5229,6 +5471,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-629674534864285061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient
+  guid: a0a999940fd9b34f950833f41f7e9552
+  Banks:
+  - {fileID: -5459121609138590551}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 88920
 --- !u!114 &-605758328322439657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5491,6 +5756,28 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 1
   Exists: 0
+--- !u!114 &-164094480576915322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/CatState
+  m_EditorClassIdentifier: 
+  Name: CatState
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 1
+  Exists: 0
 --- !u!114 &-157231836003792205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5513,6 +5800,28 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 1
   Exists: 0
+--- !u!114 &-113397246627270284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/CatDistance
+  m_EditorClassIdentifier: 
+  Name: CatDistance
+  Min: 0
+  Max: 20
+  Default: 20
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 1
+  Exists: 1
 --- !u!114 &-67973449062610659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5644,6 +5953,7 @@ MonoBehaviour:
   - {fileID: 2816952331207097112}
   - {fileID: -7989179478423518636}
   - {fileID: 1809678876975046269}
+  - {fileID: -629674534864285061}
   EditorParameters:
   - {fileID: -7396830286595169760}
   - {fileID: 2620611223961402858}
@@ -5651,7 +5961,7 @@ MonoBehaviour:
   - {fileID: -5459121609138590551}
   StringsBanks:
   - {fileID: 7130309753165740675}
-  stringsBankWriteTime: 637730085369627856
+  stringsBankWriteTime: 637730807230330282
   cacheVersion: 8
 --- !u!114 &1766111891408224
 MonoBehaviour:
@@ -6307,6 +6617,28 @@ MonoBehaviour:
   Min: 0
   Max: 3
   Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 1
+  Exists: 0
+--- !u!114 &1111551570781564995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/CatState
+  m_EditorClassIdentifier: 
+  Name: CatState
+  Min: 0
+  Max: 3
+  Default: 0
   ID:
     data1: 0
     data2: 0
@@ -7150,6 +7482,28 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 1
   Exists: 0
+--- !u!114 &2371674087347826322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/CatState
+  m_EditorClassIdentifier: 
+  Name: CatState
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 1
+  Exists: 0
 --- !u!114 &2408168744491323138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7368,7 +7722,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 2293765817363877439}
+  - {fileID: 7874814959697627300}
   MinDistance: 1
   MaxDistance: 20
   Length: 2500
@@ -8250,6 +8604,28 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 1
   Exists: 0
+--- !u!114 &4216258873062636664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/CatState
+  m_EditorClassIdentifier: 
+  Name: CatState
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 1
+  Exists: 0
 --- !u!114 &4225137067662157145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8471,6 +8847,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &4535026562580339032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/CatState
+  m_EditorClassIdentifier: 
+  Name: CatState
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 1
+  Exists: 0
 --- !u!114 &4578615503701589407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9219,6 +9617,28 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 1
   Exists: 0
+--- !u!114 &5845893578670619004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/CatState
+  m_EditorClassIdentifier: 
+  Name: CatState
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 1
+  Exists: 1
 --- !u!114 &5991512017075531107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9309,6 +9729,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 120791
+--- !u!114 &6239819817688967134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CatDial/CatState
+  m_EditorClassIdentifier: 
+  Name: CatState
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 1
+  Exists: 0
 --- !u!114 &6255495453313777561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9835,11 +10277,11 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7203910087083134219}
-  - {fileID: 4145206736239174769}
+  - {fileID: 5845893578670619004}
+  - {fileID: -113397246627270284}
   MinDistance: 0
   MaxDistance: 0
-  Length: 111238
+  Length: 111666
 --- !u!114 &6908368034233868220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9862,6 +10304,29 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 1
   Exists: 0
+--- !u!114 &6930377528736666929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient
+  guid: a0a999940fd9b34f950833f41f7e9552
+  Banks:
+  - {fileID: -5459121609138590551}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 88920
 --- !u!114 &7042786164139930388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9943,10 +10408,10 @@ MonoBehaviour:
   Path: FMODBuild/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637730085369627856
+  lastModified: 637730807230330282
   FileSizes:
   - Name: 
-    Value: 1030
+    Value: 1068
   Exists: 1
 --- !u!114 &7135092356095548438
 MonoBehaviour:
@@ -10034,6 +10499,28 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Type: 0
+  IsGlobal: 1
+  Exists: 0
+--- !u!114 &7261320511489773187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CatDial/CatState
+  m_EditorClassIdentifier: 
+  Name: CatState
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
   IsGlobal: 1
   Exists: 0
 --- !u!114 &7261563834676097561
@@ -10388,6 +10875,28 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 1
   Exists: 0
+--- !u!114 &7874814959697627300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CatDial/CatState
+  m_EditorClassIdentifier: 
+  Name: CatState
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 1
+  Exists: 1
 --- !u!114 &7910493355454213492
 MonoBehaviour:
   m_ObjectHideFlags: 0

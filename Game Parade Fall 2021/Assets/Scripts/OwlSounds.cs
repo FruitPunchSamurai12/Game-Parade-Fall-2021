@@ -10,13 +10,13 @@ public class OwlSounds : MonoBehaviour
     private void OnEnable()
     {
         PlayerAnimator.onStep += PlayStepSound;
-        PlayerAnimator.onBlow += PlayFeatherDropSound;
+        PlayerAnimator.onMarkingStart += PlayFeatherDropSound;
     }
 
     private void OnDisable()
     {
         PlayerAnimator.onStep -= PlayStepSound;
-        PlayerAnimator.onBlow -= PlayFeatherDropSound;
+        PlayerAnimator.onMarkingStart -= PlayFeatherDropSound;
     }
     
     // Start is called before the first frame update

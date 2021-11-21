@@ -15,6 +15,7 @@ public class PlayerAnimator : MonoBehaviour
     float yMove = 0f;
 
     public static event Action onStep;
+    public static event Action onMarkingStart;
     public static event Action onBlow;
 
     private void OnEnable()
@@ -47,7 +48,11 @@ public class PlayerAnimator : MonoBehaviour
 
     void OnMarkPressed(InputAction.CallbackContext ctx)
     {
-        if (markerPlacer.CanMark) animator.SetTrigger("Mark");
+        if (markerPlacer.CanMark)
+        {
+            animator.SetTrigger("Mark");
+            onMarkingStart?.Invoke();
+        }
     }
 
     public void Blow () => onBlow?.Invoke();

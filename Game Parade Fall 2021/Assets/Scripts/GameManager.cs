@@ -18,11 +18,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Transform spawnPlayerPos;
     [SerializeField]
-    Transform exitPoint;
+    GameObject[] exitPoints;
 
     public Transform PlayerTransform { get; private set; }
     public Transform CatTransform { get; private set; }
-    public Transform ExitPoint { get { return exitPoint; } }
+    public Transform ExitPoint { get { return exitPoints[_exitIndex].transform; } }
     public GameObject Bird { get; private set; }
 
     public GameObject Cat { get; private set; }
@@ -33,9 +33,11 @@ public class GameManager : MonoBehaviour
 
     public event Action onBirdCaught;
     public event Action onBirdReset;
+    public event Action onBirdWon;
     public event Action onGameOver;
 
     bool _birdCaught = false;
+    int _exitIndex;
     public static GameManager Instance { get; private set; } 
 
     private void Awake()
@@ -53,6 +55,11 @@ public class GameManager : MonoBehaviour
         CatTransform = neko.transform;
         Cat = neko.gameObject;
         Director.Instance.SetCatAndBird(Cat, Bird);
+        _exitIndex = GameStateMachine.Instance.CurrentExit;
+        for (int i = 0; i < exitPoints.Length; i++)
+        {
+            exitPoints[i].SetActive(_exitIndex == i);          
+        }
     }
 
     public void BirdGotCaught()
@@ -84,4 +91,8 @@ public class GameManager : MonoBehaviour
         Director.Instance.PlayerReset(currentCheckpoint.AreaID,currentCheckpoint.CatNewAreaID);
     }
 
+    public void BirdGotToTheEnd()
+    {
+        onBirdWon?.Invoke();
+    }
 }

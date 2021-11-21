@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
        Cursor.visible = false;
        Cursor.lockState = CursorLockMode.Locked;
         GameManager.Instance.onGameOver += FreeCursorOnGameOver;
+        GameManager.Instance.onBirdWon += FreeCursorOnGameOver;
         GameManager.Instance.onBirdCaught += RestrictMovement;
         GameManager.Instance.onBirdReset += AllowMovement;
     }
@@ -59,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         GameManager.Instance.onGameOver -= FreeCursorOnGameOver;
+        GameManager.Instance.onBirdWon -= FreeCursorOnGameOver;
         GameManager.Instance.onBirdCaught -= RestrictMovement;
         GameManager.Instance.onBirdReset -= AllowMovement;
     }

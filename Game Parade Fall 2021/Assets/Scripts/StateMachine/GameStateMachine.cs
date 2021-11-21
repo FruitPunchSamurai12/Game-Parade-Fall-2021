@@ -8,20 +8,24 @@ public class GameStateMachine : MonoBehaviour
 {
     public static event Action<IState> OnGameStateChanged;
 
-    private static GameStateMachine _instance;
+    public static GameStateMachine Instance { get; private set; }
     private StateMachine _stateMachine;
+
+    [SerializeField] int _numberOfExits = 3;
+    public int CurrentExit { get; private set; }
 
     public Type CurrentStateType => _stateMachine.CurrentState.GetType();
 
     private void Awake()
     {
-        if(_instance != null)
+        if(Instance != null)
         {
             Destroy(gameObject);
             return;
         }
-        _instance = this;
+        Instance = this;
         DontDestroyOnLoad(gameObject);
+        CurrentExit = -1;
         _stateMachine = new StateMachine();
         _stateMachine.OnStateChanged += state => OnGameStateChanged?.Invoke(state);
         var menu = new Menu();
@@ -42,6 +46,16 @@ public class GameStateMachine : MonoBehaviour
     private void Update()
     {
         _stateMachine.Tick();
+    }
+
+    public void SetNewExit()
+    {
+        int newExit = 0;
+        do
+        {
+            newExit = UnityEngine.Random.Range(0, _numberOfExits);
+        } while (newExit == CurrentExit);
+        CurrentExit = newExit;
     }
 }
 
@@ -87,6 +101,7 @@ public class LoadLevel : IState
     private List<AsyncOperation> _operations = new List<AsyncOperation>();
     public void OnEnter()
     {
+        GameStateMachine.Instance.SetNewExit();
        _operations.Add(SceneManager.LoadSceneAsync(PlayButton.LevelToLoad));
        _operations.Add(SceneManager.LoadSceneAsync("UI", LoadSceneMode.Additive));
     }

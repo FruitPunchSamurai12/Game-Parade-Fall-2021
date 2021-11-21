@@ -44,9 +44,11 @@ public class PlayerMovement : MonoBehaviour
         InputManager.Actions.Player.Sprint.started += OnSprintButtonStart; 
         InputManager.Actions.Player.Sprint.canceled += OnSprintButtonCancel;
 
-       Cursor.visible = false;
-       Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Pause.onPause += FreeCursor;
         GameManager.Instance.onGameOver += FreeCursorOnGameOver;
+        GameManager.Instance.onBirdWon += FreeCursorOnGameOver;
         GameManager.Instance.onBirdCaught += RestrictMovement;
         GameManager.Instance.onBirdReset += AllowMovement;
     }
@@ -56,11 +58,25 @@ public class PlayerMovement : MonoBehaviour
 
     void FreeCursorOnGameOver()
     {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        FreeCursor(true);
         GameManager.Instance.onGameOver -= FreeCursorOnGameOver;
+        GameManager.Instance.onBirdWon -= FreeCursorOnGameOver;
         GameManager.Instance.onBirdCaught -= RestrictMovement;
         GameManager.Instance.onBirdReset -= AllowMovement;
+    }
+
+    private void FreeCursor(bool free)
+    {
+        if (free)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     private void Update()

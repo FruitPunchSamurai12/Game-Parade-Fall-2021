@@ -8,22 +8,28 @@ public class GameStateMachine : MonoBehaviour
 {
     public static event Action<IState> OnGameStateChanged;
 
-    private static GameStateMachine _instance;
+    public static GameStateMachine Instance { get; private set; }
     private StateMachine _stateMachine;
+
+    [SerializeField] int _numberOfExits = 3;
+    bool _pausePressed;
+    public int CurrentExit { get; private set; }
 
     public Type CurrentStateType => _stateMachine.CurrentState.GetType();
 
     private void Awake()
     {
-        if(_instance != null)
+        if(Instance != null)
         {
             Destroy(gameObject);
             return;
         }
-        _instance = this;
+        Instance = this;
         DontDestroyOnLoad(gameObject);
+        CurrentExit = -1;
         _stateMachine = new StateMachine();
         _stateMachine.OnStateChanged += state => OnGameStateChanged?.Invoke(state);
+        _stateMachine.OnStateChanged += (state) => _pausePressed = false;
         var menu = new Menu();
         var loading = new LoadLevel();
         var play = new Play();
@@ -33,8 +39,8 @@ public class GameStateMachine : MonoBehaviour
 
         _stateMachine.AddTransition(menu, loading, () => PlayButton.LevelToLoad != null);
         _stateMachine.AddTransition(loading, play, loading.Finished);
-       // _stateMachine.AddTransition(play, pause, () => Input.GetKeyDown(KeyCode.Escape));
-       // _stateMachine.AddTransition(pause, play, () => Input.GetKeyDown(KeyCode.Escape));
+        _stateMachine.AddTransition(play, pause, () => _pausePressed==true);
+        _stateMachine.AddTransition(pause, play, () => _pausePressed==true);
         _stateMachine.AddTransition(pause, menu, () => BackToMenuButton.Pressed);
         _stateMachine.AddTransition(play, menu, () => BackToMenuButton.Pressed);
     }
@@ -42,6 +48,21 @@ public class GameStateMachine : MonoBehaviour
     private void Update()
     {
         _stateMachine.Tick();
+    }
+
+    public void SetNewExit()
+    {
+        int newExit = 0;
+        do
+        {
+            newExit = UnityEngine.Random.Range(0, _numberOfExits);
+        } while (newExit == CurrentExit);
+        CurrentExit = newExit;
+    }
+
+    public void PauseButtonPressed()
+    {
+        _pausePressed = true;
     }
 }
 
@@ -51,6 +72,8 @@ public class Menu : IState
     {
         PlayButton.LevelToLoad = null;
         SceneManager.LoadSceneAsync("MainMenu");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void OnExit()
@@ -87,6 +110,8 @@ public class LoadLevel : IState
     private List<AsyncOperation> _operations = new List<AsyncOperation>();
     public void OnEnter()
     {
+        GameStateMachine.Instance.SetNewExit();
+        Pool.ClearAll();
        _operations.Add(SceneManager.LoadSceneAsync(PlayButton.LevelToLoad));
        _operations.Add(SceneManager.LoadSceneAsync("UI", LoadSceneMode.Additive));
     }
@@ -105,21 +130,26 @@ public class LoadLevel : IState
 public class Pause : IState
 {
     public static bool Active { get; private set; }
+    public static Action<bool> onPause;
     public void OnEnter()
     {
         Time.timeScale = 0f;
         Active = true;
+        onPause?.Invoke(true);
     }
 
     public void OnExit()
     {
         Time.timeScale = 1f;
         Active = false;
+        onPause?.Invoke(false);
     }
 
     public void Tick()
     {
 
     }
+
+  
 }
 

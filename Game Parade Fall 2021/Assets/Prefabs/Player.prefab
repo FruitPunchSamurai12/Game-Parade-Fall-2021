@@ -114,10 +114,9 @@ MonoBehaviour:
   isSprinting: 0
   walkSpeed: 0.12
   sprintSpeed: 0.19
-  maxStamina: 100
   currentStamina: 100
-  staminaCostRate: 0.9
-  staminaRegenerateRate: 0.2
+  staminaCostRate: 0.8
+  staminaRegenerateRate: 0.4
   _restrictMovement: 0
 --- !u!114 &292991551827564847
 MonoBehaviour:

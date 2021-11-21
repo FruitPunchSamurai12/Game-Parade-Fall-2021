@@ -6,16 +6,16 @@ public class MazeGenerator : MonoBehaviour
 {
     [SerializeField] GameObject _prefabToPlace;
     [SerializeField] Texture2D _mazeTexture;
-    [SerializeField] float _xOffset=1;
-    [SerializeField] float _zOffset=1;
+    [SerializeField] float _xOffset = 1;
+    [SerializeField] float _zOffset = 1;
     [SerializeField] int _width = 32;
     [SerializeField] int _height = 32;
     [SerializeField] [Range(0, 1)] float _wallColorThreshold = 0.5f;
 
-   
+
 
     [SerializeField] Transform _mazeParent;
-
+#if UNITY_EDITOR
     public void GenerateMaze()
     {
 
@@ -45,4 +45,5 @@ public class MazeGenerator : MonoBehaviour
 
         }
     }
+#endif
 }

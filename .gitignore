@@ -83,3 +83,8 @@ Game Parade Fall 2021/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
 /[Aa]ssets/StreamingAssets/**/*.bank
 /[Aa]ssets/StreamingAssets/**/*.bank.meta
 fmod_editor.log
+*.lock
+Game Parade Fall 2021/.vs/Game Parade Fall 2021/v15/Server/sqlite3/storage.ide
+Game Parade Fall 2021/.vs/Game Parade Fall 2021/v15/Server/sqlite3/storage.ide-wal
+Game Parade Fall 2021/.vs/Game Parade Fall 2021/v15/Server/sqlite3/storage.ide-shm
+Game Parade Fall 2021/fmod_editor.log

@@ -15,7 +15,7 @@ public class MazeGenerator : MonoBehaviour
    
 
     [SerializeField] Transform _mazeParent;
-
+#if UNITY_EDITOR
     public void GenerateMaze()
     {
 
@@ -45,4 +45,5 @@ public class MazeGenerator : MonoBehaviour
 
         }
     }
+#endif
 }

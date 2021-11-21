@@ -16,6 +16,7 @@ public class ToggleablePanel : MonoBehaviour
     float _timer = 0;
     [SerializeField] AnimationCurve _showCurve;
     [SerializeField] AnimationCurve _hideCurve;
+    [SerializeField] GameObject _objectToToggleActive;
 
     public event Action onShowComplete;
     public event Action onHideComplete;
@@ -48,6 +49,8 @@ public class ToggleablePanel : MonoBehaviour
     {
         _timer = 0;
         StopAllCoroutines();
+        if (_objectToToggleActive != null)
+            _objectToToggleActive.SetActive(false);
         StartCoroutine(HideCoroutine());
     }
 
@@ -63,6 +66,9 @@ public class ToggleablePanel : MonoBehaviour
         _canvasGroup.alpha = 1f;
         _canvasGroup.blocksRaycasts = true;
         _canvasGroup.interactable = true;
+        if(_objectToToggleActive!=null)       
+            _objectToToggleActive.SetActive(true);
+        
         onShowComplete?.Invoke();
     }
 

@@ -102,6 +102,7 @@ public class LoadLevel : IState
     public void OnEnter()
     {
         GameStateMachine.Instance.SetNewExit();
+        Pool.ClearAll();
        _operations.Add(SceneManager.LoadSceneAsync(PlayButton.LevelToLoad));
        _operations.Add(SceneManager.LoadSceneAsync("UI", LoadSceneMode.Additive));
     }

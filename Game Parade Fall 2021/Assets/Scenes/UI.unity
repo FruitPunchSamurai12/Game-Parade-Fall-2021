@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &92394914
 RectTransform:
   m_ObjectHideFlags: 0
@@ -424,6 +424,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _objectToToggleActive: {fileID: 92394913}
 --- !u!225 &358289659
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -689,6 +690,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _objectToToggleActive: {fileID: 1579374247}
 --- !u!225 &476626011
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1621,7 +1623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1579374248
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2110,6 +2112,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _objectToToggleActive: {fileID: 0}
 --- !u!225 &1738520483
 CanvasGroup:
   m_ObjectHideFlags: 0

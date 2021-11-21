@@ -53,4 +53,11 @@ public class Pool : MonoBehaviour
         pooledObject.transform.SetParent(this.transform);
         objects.Enqueue(pooledObject);
     }
+
+
+    public static void ClearAll()
+    {
+        pools.Clear();
+        pools = new Dictionary<PooledMonoBehaviour, Pool>();
+    }
 }

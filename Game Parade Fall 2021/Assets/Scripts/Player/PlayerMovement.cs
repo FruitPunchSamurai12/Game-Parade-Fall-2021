@@ -11,8 +11,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float sprintSpeed = 10f;
     [SerializeField]
-    float maxStamina = 100f;
-    [SerializeField]
     float currentStamina = 0f;
     [SerializeField]
     float staminaCostRate = 0.01f;
@@ -21,12 +19,14 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movementInput;
     float speed = 0f;
+    bool isSprintButtonHeld = false;
 
     new Rigidbody rigidbody;
 
     public bool _restrictMovement = false;
 
     public bool IsSprinting => isSprinting;
+    public float CurrentStamina => currentStamina;
 
     public Vector3 Direction { get; private set; }
     public float Speed => speed;
@@ -39,14 +39,16 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         speed = walkSpeed;
-        currentStamina = maxStamina;
+        currentStamina = 100f;
 
-        InputManager.Actions.Player.Sprint.started += OnSprintStart; 
-        InputManager.Actions.Player.Sprint.canceled += OnSprintEnd;
+        InputManager.Actions.Player.Sprint.started += OnSprintButtonStart; 
+        InputManager.Actions.Player.Sprint.canceled += OnSprintButtonCancel;
 
-       Cursor.visible = false;
-       Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Pause.onPause += FreeCursor;
         GameManager.Instance.onGameOver += FreeCursorOnGameOver;
+        GameManager.Instance.onBirdWon += FreeCursorOnGameOver;
         GameManager.Instance.onBirdCaught += RestrictMovement;
         GameManager.Instance.onBirdReset += AllowMovement;
     }
@@ -56,11 +58,25 @@ public class PlayerMovement : MonoBehaviour
 
     void FreeCursorOnGameOver()
     {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        FreeCursor(true);
         GameManager.Instance.onGameOver -= FreeCursorOnGameOver;
+        GameManager.Instance.onBirdWon -= FreeCursorOnGameOver;
         GameManager.Instance.onBirdCaught -= RestrictMovement;
         GameManager.Instance.onBirdReset -= AllowMovement;
+    }
+
+    private void FreeCursor(bool free)
+    {
+        if (free)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     private void Update()
@@ -87,7 +103,17 @@ public class PlayerMovement : MonoBehaviour
         Direction = moveRight + moveForward;
 
         rigidbody.MovePosition(rigidbody.position + Direction*speed);
-        speed = isSprinting && currentStamina > 0f ? sprintSpeed : walkSpeed;
+        
+        if (isSprintButtonHeld && currentStamina > 0f)
+        {
+            speed = sprintSpeed;
+            isSprinting = true;
+        } 
+        else
+        {
+            speed = walkSpeed;
+            isSprinting = false;
+        }
     }
 
     
@@ -102,22 +128,22 @@ public class PlayerMovement : MonoBehaviour
 
     void RegenerateStamina ()
     {
-        if (currentStamina < maxStamina)
+        if (currentStamina < 100f)
             currentStamina += staminaRegenerateRate;
         else
-            currentStamina = maxStamina;
+            currentStamina = 100f;
     }
 
-    void OnSprintStart (InputAction.CallbackContext ctx) 
+    void OnSprintButtonStart (InputAction.CallbackContext ctx) 
     {
-        isSprinting = true;
+        isSprintButtonHeld = true;
         InvokeRepeating("DepleteStamina", 0f, 0.1f); 
         CancelInvoke("RegenerateStamina");
     }
 
-    void OnSprintEnd (InputAction.CallbackContext ctx)
+    void OnSprintButtonCancel (InputAction.CallbackContext ctx)
     {
-        isSprinting = false;
+        isSprintButtonHeld = false;
         InvokeRepeating("RegenerateStamina", 0f, 0.1f); 
         CancelInvoke("DepleteStamina");
     }

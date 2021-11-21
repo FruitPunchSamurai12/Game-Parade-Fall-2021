@@ -6,6 +6,10 @@ public class Music : MonoBehaviour
 {
     private FMOD.Studio.EventInstance music;
     private FMOD.Studio.EventInstance ambient;
+
+    float musicUserVolume = GameSettings.Instance.music;
+    float sfxUserVolume = GameSettings.Instance.sfx;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +23,10 @@ public class Music : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        float musicUserVolume = GameSettings.Instance.music;
+        float sfxUserVolume = GameSettings.Instance.sfx;
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("musicUserVolume", musicUserVolume);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("sfxUserVolume", sfxUserVolume);
     }
     private void OnEnable()
     {

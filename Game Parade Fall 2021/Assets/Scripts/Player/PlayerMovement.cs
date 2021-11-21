@@ -24,7 +24,12 @@ public class PlayerMovement : MonoBehaviour
 
     new Rigidbody rigidbody;
 
-    bool _restrictMovement = false;
+    public bool _restrictMovement = false;
+
+    public bool IsSprinting => isSprinting;
+
+    public Vector3 Direction { get; private set; }
+    public float Speed => speed;
 
     private void Awake()
     {
@@ -46,9 +51,8 @@ public class PlayerMovement : MonoBehaviour
         GameManager.Instance.onBirdReset += AllowMovement;
     }
 
-    void RestrictMovement() { _restrictMovement = true; }
-    void AllowMovement() { _restrictMovement = false; }
-
+    public void RestrictMovement() { _restrictMovement = true; }
+    public void AllowMovement() { _restrictMovement = false; }
 
     void FreeCursorOnGameOver()
     {
@@ -78,10 +82,11 @@ public class PlayerMovement : MonoBehaviour
 
     void ApplyMovement ()
     {
-        var moveRight = transform.right * movementInput.x * speed;
-        var moveForward = transform.forward * movementInput.y * speed;
-        rigidbody.MovePosition(rigidbody.position + moveRight + moveForward);
+        var moveRight = transform.right * movementInput.x;
+        var moveForward = transform.forward * movementInput.y;
+        Direction = moveRight + moveForward;
 
+        rigidbody.MovePosition(rigidbody.position + Direction*speed);
         speed = isSprinting && currentStamina > 0f ? sprintSpeed : walkSpeed;
     }
 

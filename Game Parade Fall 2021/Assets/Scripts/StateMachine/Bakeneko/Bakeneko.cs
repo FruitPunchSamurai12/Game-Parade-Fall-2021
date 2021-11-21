@@ -8,6 +8,8 @@ public class Bakeneko:MonoBehaviour
     [SerializeField] float _catchDistance = 1f;
     [SerializeField] float _reactionTime = .75f;
     [SerializeField] float _investigationTime = 10f;
+    [SerializeField] float _investigationRadius = 7.5f;
+    [SerializeField] float _predictionTime = 0.75f;
     [SerializeField] float _sightRange = 10f;
     [SerializeField] float _sightAngle = 45f;
     [SerializeField] float _lookRotationSpeed = 300f;
@@ -27,10 +29,12 @@ public class Bakeneko:MonoBehaviour
     public float InvestigationTime => _investigationTime;
     public float LookRotatioNSpeed => _lookRotationSpeed;
     public bool WantsToAmbust { get; private set; }
+    public float InvestigationRadius => _investigationRadius;
 
     Transform _playerTranform;
     float _sightRangeSqr;
     float _feelRadiusSqr;
+    bool _hasPlayerInSight = false;
     private void Awake()
     {
         _sightRangeSqr = _sightRange * _sightRange;
@@ -72,7 +76,17 @@ public class Bakeneko:MonoBehaviour
         _playerTranform = GameManager.Instance.PlayerTransform;
         if (_playerTranform == null)
             return false;
-        return CanSee(_playerTranform.position);
+        if(CanSee(_playerTranform.position))
+        {
+            _hasPlayerInSight = true;
+            return true;
+        }
+        if(_hasPlayerInSight)
+        {
+            _hasPlayerInSight = false;
+            Director.Instance.LostBirdLineOfSight(_predictionTime);
+        }
+        return false;
     }
 
     bool CanSee(Vector3 target)
@@ -132,6 +146,9 @@ public class Bakeneko:MonoBehaviour
         color = new Color(0, 1, 0, 0.25f);
         UnityEditor.Handles.color = color;
         UnityEditor.Handles.DrawSolidDisc(transform.position, Vector3.up, _feelRadius);
+        color = new Color(1, 0, 0, 0.1f);
+        UnityEditor.Handles.color = color;
+        UnityEditor.Handles.DrawSolidDisc(transform.position, Vector3.up, _investigationRadius);
     }
 #endif
 }

@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
         var neko = Instantiate<Bakeneko>(catPrefab, spawnCatPos.position, Quaternion.identity);
         CatTransform = neko.transform;
         Cat = neko.gameObject;
-        Director.Instance.SetCatAndBird(neko.GetComponent<CellTracker>(), player.GetComponent<CellTracker>());
+        Director.Instance.SetCatAndBird(Cat, Bird);
     }
 
     public void BirdGotCaught()
@@ -80,8 +80,8 @@ public class GameManager : MonoBehaviour
     public void RespawnBird(Checkpoint currentCheckpoint)
     {
         _birdCaught = false;
-        Bird.GetComponent<CellTracker>().Teleport(currentCheckpoint.transform.position);
-        Director.Instance.TeleportCat(currentCheckpoint.waypointToTeleportCatAfterItCatchesTheBird);
+        Bird.transform.position = currentCheckpoint.transform.position;
+        Director.Instance.PlayerReset(currentCheckpoint.AreaID,currentCheckpoint.CatNewAreaID);
     }
 
 }

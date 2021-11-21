@@ -15,6 +15,33 @@ public class @InputActions : IInputActionCollection, IDisposable
     ""name"": ""InputActions"",
     ""maps"": [
         {
+            ""name"": ""Global"",
+            ""id"": ""2c492582-9fc4-442f-9d5b-9289ce821f10"",
+            ""actions"": [
+                {
+                    ""name"": ""AnyKey"",
+                    ""type"": ""Button"",
+                    ""id"": ""94038d65-19b0-45bc-8b39-98c674f29f51"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""93bdd844-967b-4a7b-a830-7a11bce74107"",
+                    ""path"": ""<Keyboard>/anyKey"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""AnyKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
             ""name"": ""Player"",
             ""id"": ""13751930-9476-4d9a-b27d-b979c9d40cb4"",
             ""actions"": [
@@ -170,6 +197,9 @@ public class @InputActions : IInputActionCollection, IDisposable
         }
     ]
 }");
+        // Global
+        m_Global = asset.FindActionMap("Global", throwIfNotFound: true);
+        m_Global_AnyKey = m_Global.FindAction("AnyKey", throwIfNotFound: true);
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
@@ -223,6 +253,39 @@ public class @InputActions : IInputActionCollection, IDisposable
     {
         asset.Disable();
     }
+
+    // Global
+    private readonly InputActionMap m_Global;
+    private IGlobalActions m_GlobalActionsCallbackInterface;
+    private readonly InputAction m_Global_AnyKey;
+    public struct GlobalActions
+    {
+        private @InputActions m_Wrapper;
+        public GlobalActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @AnyKey => m_Wrapper.m_Global_AnyKey;
+        public InputActionMap Get() { return m_Wrapper.m_Global; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(GlobalActions set) { return set.Get(); }
+        public void SetCallbacks(IGlobalActions instance)
+        {
+            if (m_Wrapper.m_GlobalActionsCallbackInterface != null)
+            {
+                @AnyKey.started -= m_Wrapper.m_GlobalActionsCallbackInterface.OnAnyKey;
+                @AnyKey.performed -= m_Wrapper.m_GlobalActionsCallbackInterface.OnAnyKey;
+                @AnyKey.canceled -= m_Wrapper.m_GlobalActionsCallbackInterface.OnAnyKey;
+            }
+            m_Wrapper.m_GlobalActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @AnyKey.started += instance.OnAnyKey;
+                @AnyKey.performed += instance.OnAnyKey;
+                @AnyKey.canceled += instance.OnAnyKey;
+            }
+        }
+    }
+    public GlobalActions @Global => new GlobalActions(this);
 
     // Player
     private readonly InputActionMap m_Player;
@@ -313,6 +376,10 @@ public class @InputActions : IInputActionCollection, IDisposable
             if (m_KeyboardMouseSchemeIndex == -1) m_KeyboardMouseSchemeIndex = asset.FindControlSchemeIndex("Keyboard & Mouse");
             return asset.controlSchemes[m_KeyboardMouseSchemeIndex];
         }
+    }
+    public interface IGlobalActions
+    {
+        void OnAnyKey(InputAction.CallbackContext context);
     }
     public interface IPlayerActions
     {

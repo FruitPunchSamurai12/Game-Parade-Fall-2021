@@ -2,6 +2,9 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+
+///NOT USED
+
 public class Ambush : IState
 {
     NavMeshAgent _agent;
@@ -23,12 +26,12 @@ public class Ambush : IState
     public void OnEnter()
     {
         _agent.speed = _moveSpeed;
-        if(Director.Instance.GetAmbushAndLookPoint(out _ambushPosition,out _lookAtPosition))
-        {
-            _agent.SetDestination(_ambushPosition);
-        }
-        else
-            onFailToAmbush?.Invoke();
+       // if(Director.Instance.GetAmbushAndLookPoint(out _ambushPosition,out _lookAtPosition))
+       // {
+       //     _agent.SetDestination(_ambushPosition);
+       // }
+       // else
+       //     onFailToAmbush?.Invoke();
         
     }
 

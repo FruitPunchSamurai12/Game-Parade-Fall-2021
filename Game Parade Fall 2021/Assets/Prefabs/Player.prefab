@@ -109,7 +109,6 @@ GameObject:
   - component: {fileID: 7275037938626774242}
   - component: {fileID: 7275037938626774241}
   - component: {fileID: 292991551827564847}
-  - component: {fileID: -5836124308785226483}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -197,19 +196,6 @@ MonoBehaviour:
   mark: {fileID: 4506842334376232533, guid: 658d2adcf18d1104c90166e4119b2aa1, type: 3}
   markingDelay: 2
   placementTransform: {fileID: 5589671563755990648}
---- !u!114 &-5836124308785226483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7275037938626774247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 934a8af7b88de6f4f9f00069a26db1fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  updateTime: 0.5
 --- !u!1 &7275037938780156073
 GameObject:
   m_ObjectHideFlags: 0

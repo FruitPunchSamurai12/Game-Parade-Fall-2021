@@ -1795,6 +1795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1adbb435d48453943ad3ab9de42098d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _frontAreaCatTeleportWaypoint: {fileID: 793157428}
+  _backAreaCatTeleportWaypoint: {fileID: 1863409717}
 --- !u!1 &845676869
 GameObject:
   m_ObjectHideFlags: 0

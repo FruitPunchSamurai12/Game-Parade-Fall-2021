@@ -9,10 +9,13 @@ public class Investigate : IState
     float _stoppingDistanceSqr;
     float _timeLimit;
     float _timer;
+    float _wanderRadius;
+    bool _gotInvestigatePoint;
 
-    public Investigate(NavMeshAgent agent, float moveSpeed,float timeLimit)
+    public Investigate(NavMeshAgent agent, float moveSpeed,float timeLimit,float wanderRadius)
     {
         _agent = agent;
+        _wanderRadius = wanderRadius;
         _moveSpeed = moveSpeed;
         _agent.speed = _moveSpeed;
         _timeLimit = timeLimit;
@@ -25,11 +28,12 @@ public class Investigate : IState
         _target = Director.Instance.LastInterestingLocation;
         _timer = 0;
         _agent.SetDestination(_target);
+        _gotInvestigatePoint = false;
     }
 
     public void OnExit()
     {
-
+        _gotInvestigatePoint = false;
     }
 
     public void Tick()
@@ -37,10 +41,50 @@ public class Investigate : IState
         _timer += Time.deltaTime;
         if (_agent.transform.position.FlatVectorDistanceSquared(_target) < _stoppingDistanceSqr)
         {
-            _target = Director.Instance.PickInvestigateTarget();
-            _agent.SetDestination(_target);
+            if (!_gotInvestigatePoint)
+            {
+                _target = Director.Instance.PickInvestigateTarget();
+                _agent.SetDestination(_target);
+                _gotInvestigatePoint = true;
+            }
+            else
+            {
+                if (!TrySetTarget())
+                {
+                    _gotInvestigatePoint = false;
+                }
+            }
         }
     }
 
     public bool SearchedForTooLong() { return _timer > _timeLimit; }
+
+
+    private bool TrySetTarget()
+    {
+        var direction = _agent.transform.forward;
+        bool validDestination = false;
+        int attempts = 100;
+        var destination = _agent.transform.position;
+        while (!validDestination && attempts > 0)
+        {
+            var random = Random.insideUnitCircle;
+            direction = direction + new Vector3(random.x, 0, random.y);
+            destination = _agent.transform.position + direction.normalized * Random.Range(0, _wanderRadius);
+            validDestination = SamplePosition(destination);          
+            attempts--;
+        }
+        if (validDestination)
+        {
+            _target = destination;
+            _agent.SetDestination(_target);
+        }
+        return validDestination;
+    }
+
+    bool SamplePosition(Vector3 position)
+    {
+        NavMeshHit hit;
+        return NavMesh.SamplePosition(position, out hit, _agent.height * 2, NavMesh.AllAreas); //NavMesh.GetAreaFromName("Walkable"));
+    }
 }

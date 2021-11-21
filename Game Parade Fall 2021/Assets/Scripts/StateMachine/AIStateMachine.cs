@@ -21,7 +21,7 @@ public class AIStateMachine : MonoBehaviour
         _bakeneko = GetComponent<Bakeneko>();
         _patrol = new Patrol(_agent,_bakeneko.NeutralSpeed);
         var chase = new Chase(_agent, _bakeneko.ChaseSpeed, _bakeneko.CatchDistance);
-        var investigate = new Investigate(_agent, _bakeneko.ChaseSpeed, _bakeneko.InvestigationTime);
+        var investigate = new Investigate(_agent, _bakeneko.ChaseSpeed, _bakeneko.InvestigationTime,_bakeneko.InvestigationRadius);
         var suspiciousHigh = new Suspicious(_agent, _bakeneko.LookRotatioNSpeed, _bakeneko.ReactionTime);
         var suspiciousLow = new Suspicious(_agent, _bakeneko.LookRotatioNSpeed, _bakeneko.ReactionTime);
         _stateMachine.AddTransition(_patrol, suspiciousHigh, _bakeneko.CanSeePlayer);
@@ -41,23 +41,17 @@ public class AIStateMachine : MonoBehaviour
         _stateMachine.SetState(_patrol);
     }
 
-    private void Start()
-    {
-        //Director.Instance.onBirdSwitchedAreas+=HandleBirdSwitchedArea
-    }
+ 
 
-    private void HandleBirdSwitchedArea()
+    public void ResetStateMachine(PatrolRoute patrolRoute)
     {
-        if(CurrentStateType.ToString()=="Patrol")
-        {
-
-        }
-    }
-
-    public void ResetStateMachine()
-    {
+        _agent.enabled = false;
+        transform.position = patrolRoute._routeWaypoints[0].transform.position;
+        _agent.enabled = true;
         _stateMachine.SetState(_patrol);
+        _patrol.AssignNewRoute(patrolRoute);
     }
+
 
     private void Update()
     {

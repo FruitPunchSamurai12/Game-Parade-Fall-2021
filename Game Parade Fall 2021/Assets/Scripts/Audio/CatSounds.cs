@@ -51,11 +51,13 @@ public class CatSounds : MonoBehaviour
         CatHiss = FMODUnity.RuntimeManager.CreateInstance("event:/CatHiss");
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(CatDial, GetComponent<Transform>(), GetComponent<Rigidbody>());
         CatHiss.start();
+        Debug.Log("Hiss");
     }
     void PlaySniffSound()
     {
         CatSniff = FMODUnity.RuntimeManager.CreateInstance("event:/CatSniff");
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(CatDial, GetComponent<Transform>(), GetComponent<Rigidbody>());
         CatSniff.start();
+        Debug.Log("Sniff");
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -13,6 +14,9 @@ public class CameraEffects : MonoBehaviour
     float vignetteTakeoverSpeed = 0.1f;
 
     Vignette vignette;
+
+    public static event Action onCatWithinRange;
+    public static event Action onCatOutOfRange;
 
     private void OnEnable()
     {
@@ -41,6 +45,11 @@ public class CameraEffects : MonoBehaviour
         if (distance < vignetteStartDistance)
         {
             vignette.smoothness.value = (vignetteStartDistance - distance) * vignetteTakeoverSpeed;
+            onCatWithinRange?.Invoke();
+        }
+        else
+        {
+            onCatOutOfRange?.Invoke();
         }
     }
 

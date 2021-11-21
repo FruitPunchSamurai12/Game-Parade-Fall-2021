@@ -49,7 +49,7 @@ public class Investigate : IState
             }
             else
             {
-                if (!TrySetTarget())
+                if (!TrySetWanderTarget(Director.Instance.BirdPosition))
                 {
                     _gotInvestigatePoint = false;
                 }
@@ -60,17 +60,16 @@ public class Investigate : IState
     public bool SearchedForTooLong() { return _timer > _timeLimit; }
 
 
-    private bool TrySetTarget()
+    private bool TrySetWanderTarget(Vector3 origin)
     {
-        var direction = _agent.transform.forward;
         bool validDestination = false;
         int attempts = 100;
-        var destination = _agent.transform.position;
+        var destination = origin;
         while (!validDestination && attempts > 0)
         {
             var random = Random.insideUnitCircle;
-            direction = direction + new Vector3(random.x, 0, random.y);
-            destination = _agent.transform.position + direction.normalized * Random.Range(0, _wanderRadius);
+            var direction = new Vector3(random.x, 0, random.y);
+            destination = origin + direction.normalized * Random.Range(_wanderRadius/2f, _wanderRadius);
             validDestination = SamplePosition(destination);          
             attempts--;
         }

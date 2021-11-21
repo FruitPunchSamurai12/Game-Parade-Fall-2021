@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -60,6 +61,18 @@ public class GameManager : MonoBehaviour
         {
             exitPoints[i].SetActive(_exitIndex == i);          
         }
+        InputManager.Actions.Global.Pause.performed += HandlePausePressed;
+
+    }
+
+    private void OnDestroy()
+    {
+        InputManager.Actions.Global.Pause.performed -= HandlePausePressed;
+    }
+
+    private void HandlePausePressed(InputAction.CallbackContext obj)
+    {
+        GameStateMachine.Instance.PauseButtonPressed();
     }
 
     public void BirdGotCaught()

@@ -24,8 +24,12 @@ public class ToggleablePanel : MonoBehaviour
     private void Awake()
     {
         _canvasGroup = GetComponent<CanvasGroup>();
-        if(_hideOnStart)
-            Hide();
+        if (_hideOnStart)
+        {
+            _canvasGroup.alpha = 0f;
+            _canvasGroup.blocksRaycasts = false;
+            _canvasGroup.interactable = false;
+        }
     }
 
 
@@ -58,7 +62,7 @@ public class ToggleablePanel : MonoBehaviour
     {
         while(_timer<_showTime)
         {
-            _timer+=Time.deltaTime;
+            _timer+=Time.unscaledDeltaTime;
             float percentage = _timer / _showTime;
             _canvasGroup.alpha = _showCurve.Evaluate(percentage);
             yield return null;

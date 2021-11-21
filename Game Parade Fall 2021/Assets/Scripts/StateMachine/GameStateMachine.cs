@@ -12,6 +12,7 @@ public class GameStateMachine : MonoBehaviour
     private StateMachine _stateMachine;
 
     [SerializeField] int _numberOfExits = 3;
+    bool _pausePressed;
     public int CurrentExit { get; private set; }
 
     public Type CurrentStateType => _stateMachine.CurrentState.GetType();
@@ -28,6 +29,7 @@ public class GameStateMachine : MonoBehaviour
         CurrentExit = -1;
         _stateMachine = new StateMachine();
         _stateMachine.OnStateChanged += state => OnGameStateChanged?.Invoke(state);
+        _stateMachine.OnStateChanged += (state) => _pausePressed = false;
         var menu = new Menu();
         var loading = new LoadLevel();
         var play = new Play();
@@ -37,8 +39,8 @@ public class GameStateMachine : MonoBehaviour
 
         _stateMachine.AddTransition(menu, loading, () => PlayButton.LevelToLoad != null);
         _stateMachine.AddTransition(loading, play, loading.Finished);
-       // _stateMachine.AddTransition(play, pause, () => Input.GetKeyDown(KeyCode.Escape));
-       // _stateMachine.AddTransition(pause, play, () => Input.GetKeyDown(KeyCode.Escape));
+        _stateMachine.AddTransition(play, pause, () => _pausePressed==true);
+        _stateMachine.AddTransition(pause, play, () => _pausePressed==true);
         _stateMachine.AddTransition(pause, menu, () => BackToMenuButton.Pressed);
         _stateMachine.AddTransition(play, menu, () => BackToMenuButton.Pressed);
     }
@@ -57,6 +59,11 @@ public class GameStateMachine : MonoBehaviour
         } while (newExit == CurrentExit);
         CurrentExit = newExit;
     }
+
+    public void PauseButtonPressed()
+    {
+        _pausePressed = true;
+    }
 }
 
 public class Menu : IState
@@ -65,6 +72,8 @@ public class Menu : IState
     {
         PlayButton.LevelToLoad = null;
         SceneManager.LoadSceneAsync("MainMenu");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void OnExit()
@@ -121,21 +130,26 @@ public class LoadLevel : IState
 public class Pause : IState
 {
     public static bool Active { get; private set; }
+    public static Action<bool> onPause;
     public void OnEnter()
     {
         Time.timeScale = 0f;
         Active = true;
+        onPause?.Invoke(true);
     }
 
     public void OnExit()
     {
         Time.timeScale = 1f;
         Active = false;
+        onPause?.Invoke(false);
     }
 
     public void Tick()
     {
 
     }
+
+  
 }
 

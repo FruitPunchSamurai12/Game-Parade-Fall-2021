@@ -27,7 +27,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1483797391505771774}
   - {fileID: 1483797392226944753}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -42,678 +41,678 @@ PrefabInstance:
     - target: {fileID: 587695811329622290, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077292512435}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811329622290, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077778801274}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811329622290, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077962122519}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811329622290, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077377402358}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811329622290, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077891362114}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811329622290, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077697790566}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811329622290, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078598373681}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811329622290, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077377402358}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811413877116, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078145297925}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811413877116, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077507191545}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811413877116, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078255970485}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811413877116, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077995430895}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811413877116, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705077292512435}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811413877116, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077377402358}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811413877116, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705078154450076}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811413877116, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078706501759}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811413877116, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078054668993}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811413877116, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705077292512435}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811413877116, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[5]
       value: 
-      objectReference: {fileID: 1364705077995430895}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811463732473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078416707207}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811463732473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705078967024877}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811463732473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078033550620}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811463732473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077694667218}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811463732473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705077333582906}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811463732473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[5]
       value: 
-      objectReference: {fileID: 1364705078270338450}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811463732473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077957975753}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811463732473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077763369060}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811463732473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078145297925}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811463732473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077401629032}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811494520974, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078071717504}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811494520974, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077300629296}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811494520974, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078365052495}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811494520974, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077988866448}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811494520974, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077891362114}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811494520974, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705079139452408}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811494520974, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077869809976}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811494520974, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078365052495}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811692224549, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078706501759}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811692224549, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705078154450076}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811692224549, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077377402358}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811692224549, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077869809976}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811692224549, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705079139452408}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811692224549, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078357174091}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811692224549, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077304356583}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811936518711, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077891362114}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811936518711, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705079139452408}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811936518711, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077869809976}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811936518711, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078549729431}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811936518711, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705078656396828}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811936518711, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077819421813}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811936518711, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078357174091}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695811936518711, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705077697790566}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812177935922, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077763369060}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812177935922, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077957975753}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812177935922, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078145297925}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812177935922, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078416707207}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812177935922, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705078270338450}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812177935922, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078255970485}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812177935922, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077401629032}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812177935922, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077273255078}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812177935922, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077292512435}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812261441341, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077995430895}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812261441341, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077292512435}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812261441341, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077778801274}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812261441341, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078706501759}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812261441341, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705078154450076}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812261441341, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[5]
       value: 
-      objectReference: {fileID: 1364705077401629032}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812261441341, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077304356583}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812261441341, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077561553371}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812261441341, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077589192843}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812261441341, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077684204261}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812261441341, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705077778801274}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812433926985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077333582906}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812433926985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705078270338450}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812433926985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077341440845}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812433926985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078071717504}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812433926985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705078365052495}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812433926985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[5]
       value: 
-      objectReference: {fileID: 1364705077988866448}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812433926985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[6]
       value: 
-      objectReference: {fileID: 1364705077969121159}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812433926985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078967024877}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812433926985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077957975753}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812433926985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078145297925}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812433926985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077763369060}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812433926985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705077377402358}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812454661770, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078598373681}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812454661770, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705079139452408}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812454661770, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077869809976}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812454661770, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078549729431}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812454661770, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705078656396828}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812454661770, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077819421813}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812454661770, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078357174091}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812454661770, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705077697790566}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812500469205, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077341440845}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812500469205, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077969121159}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812500469205, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077988866448}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812500469205, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078365052495}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812500469205, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078514691853}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812500469205, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077300629296}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812500469205, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077869809976}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812500469205, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077273504741}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812594837985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078145297925}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812594837985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077377402358}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812594837985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077962122519}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812594837985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078344949543}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812594837985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705079139452408}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812594837985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077684204261}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812594837985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077778801274}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812594837985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078054668993}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812594837985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078706501759}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812594837985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705077962122519}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812594837985, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[5]
       value: 
-      objectReference: {fileID: 1364705078344949543}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812652219473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077891362114}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812652219473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077377402358}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812652219473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078154450076}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812652219473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077963683219}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812652219473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078967024877}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812652219473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077763369060}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812652219473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077957975753}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812652219473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078145297925}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812652219473, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705077401629032}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812840729599, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077988866448}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812840729599, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077869809976}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812840729599, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077300629296}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812840729599, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078071717504}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812840729599, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077819421813}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812840729599, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077273504741}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812840729599, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077697790566}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812840729599, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078344949543}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812921068810, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077273255078}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812921068810, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705078303579115}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812921068810, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078255970485}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812921068810, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077507191545}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812921068810, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705078145297925}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812921068810, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077377402358}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812921068810, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705078154450076}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812921068810, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078706501759}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812921068810, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078054668993}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812921068810, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705077292512435}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695812921068810, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[5]
       value: 
-      objectReference: {fileID: 1364705077995430895}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813044104375, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077963683219}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813044104375, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705078255970485}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813044104375, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078303579115}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813044104375, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077273255078}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813044104375, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705078145297925}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813044104375, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078344949543}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813044104375, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077962122519}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813044104375, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078706501759}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813044104375, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078054668993}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813044104375, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705077778801274}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813044104375, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[5]
       value: 
-      objectReference: {fileID: 1364705077684204261}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813212295641, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077694667218}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813212295641, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077333582906}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813212295641, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078416707207}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813212295641, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078071717504}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813212295641, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077528530711}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813212295641, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078270338450}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813212295641, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077341440845}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813212295641, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705077969121159}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813273546907, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078365052495}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813273546907, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077969121159}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813273546907, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077341440845}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813273546907, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078270338450}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813273546907, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705077528530711}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813273546907, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705078514691853}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813273546907, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077300629296}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813273546907, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078365052495}
+      objectReference: {fileID: 0}
     - target: {fileID: 587695813273546907, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705077969121159}
+      objectReference: {fileID: 0}
     - target: {fileID: 1346442686763388549, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: m_Name
       value: TriggerDoors
       objectReference: {fileID: 0}
     - target: {fileID: 1346442686763388554, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1346442686763388554, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -758,39 +757,39 @@ PrefabInstance:
     - target: {fileID: 4739154320874001142, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705079139452408}
+      objectReference: {fileID: 0}
     - target: {fileID: 4739154320874001142, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077377402358}
+      objectReference: {fileID: 0}
     - target: {fileID: 4739154320874001142, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _backAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705077763369060}
+      objectReference: {fileID: 0}
     - target: {fileID: 4739154320874001142, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1364705077684204261}
+      objectReference: {fileID: 0}
     - target: {fileID: 4739154320874001142, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1364705077778801274}
+      objectReference: {fileID: 0}
     - target: {fileID: 4739154320874001142, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[2]
       value: 
-      objectReference: {fileID: 1364705078054668993}
+      objectReference: {fileID: 0}
     - target: {fileID: 4739154320874001142, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1364705078706501759}
+      objectReference: {fileID: 0}
     - target: {fileID: 4739154320874001142, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[4]
       value: 
-      objectReference: {fileID: 1364705077962122519}
+      objectReference: {fileID: 0}
     - target: {fileID: 4739154320874001142, guid: d398172a7b35124499efef513c897bba, type: 3}
       propertyPath: _frontAreaCatPatrolRoute._routeWaypoints.Array.data[5]
       value: 
-      objectReference: {fileID: 1364705078344949543}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d398172a7b35124499efef513c897bba, type: 3}
 --- !u!4 &1483797392226944753 stripped
@@ -798,571 +797,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1346442686763388554, guid: d398172a7b35124499efef513c897bba, type: 3}
   m_PrefabInstance: {fileID: 448116548924786811}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &8567834574515769022
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8387278444454959420}
-    m_Modifications:
-    - target: {fileID: 7093329920382255680, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7093329920382255680, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7093329920382255680, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7093329920382255680, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7093329920382255680, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7093329920382255680, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7093329920382255680, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7093329920382255680, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7093329920382255680, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7093329920382255680, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7093329920382255680, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7093329920382255682, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-      propertyPath: m_Name
-      value: Waypoints
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
---- !u!114 &1364705077778801274 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471994080452, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078054668993 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471730648191, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078706501759 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365473313879745, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077962122519 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471638105001, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078154450076 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471696542242, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077292512435 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472579435021, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078344949543 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365473625575833, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705079139452408 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472809208646, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077891362114 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471963702268, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077697790566 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471902584024, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078598373681 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365473350262671, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077273504741 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472562259291, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077763369060 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471835973338, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078145297925 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471689416891, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077957975753 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471625629815, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078416707207 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365473569144889, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077963683219 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471639730989, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078255970485 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365473408411147, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078303579115 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365473447826773, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077273255078 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472562008600, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077995430895 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471537196369, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077507191545 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472114572359, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077401629032 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472151420886, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078357174091 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365473645865461, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077304356583 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472584917081, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077561553371 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472311344997, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077589192843 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472198737461, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078549729431 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365473167597097, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078656396828 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365473263837346, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077819421813 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472032602827, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077869809976 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471948513158, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078071717504 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471749791806, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078365052495 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365473651642609, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077300629296 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472589644174, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1483797391505771774 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7093329920382255680, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1364705078270338450 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365473414589228, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077988866448 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471530628910, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077341440845 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472493815283, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077969121159 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471647523129, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077528530711 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472271958441, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078514691853 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365473132356019, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078033550620 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471567184802, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077694667218 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471909877612, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077333582906 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472488057476, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077377402358 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365472121097032, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705077684204261 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365471899417691, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1364705078967024877 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7212365473048080979, guid: dcf7ee342d796dc4cae9ca8ba5503e19, type: 3}
-  m_PrefabInstance: {fileID: 8567834574515769022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc99240e134e9c84f9ecb7a1a1a227bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

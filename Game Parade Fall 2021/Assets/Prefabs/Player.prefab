@@ -132,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMark: 1
   mark: {fileID: 4506842334376232533, guid: 658d2adcf18d1104c90166e4119b2aa1, type: 3}
-  markingDelay: 2
+  markingDelay: 1.2
   delayBetweenMarks: 2
   placementTransform: {fileID: 5589671563755990648}
 --- !u!1 &7930582724377539894

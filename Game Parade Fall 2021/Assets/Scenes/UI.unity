@@ -829,7 +829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1871c08e86fa1b44950a5ed4f945b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialDelay: 1
+  initialDelay: 2.5
   movementTutorial: {fileID: 1925927483}
   sprintTutorial: {fileID: 1405198117}
   markTutorial: {fileID: 1028957041}

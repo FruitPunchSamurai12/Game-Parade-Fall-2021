@@ -19,7 +19,7 @@ public class PlayButtonSounds : MonoBehaviour, IPointerEnterHandler, IPointerCli
 
     void PlayClick()
     {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/UIMouseOver");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UIGameLaunch");
         Debug.Log("Click");
     }
     void PlayHover()

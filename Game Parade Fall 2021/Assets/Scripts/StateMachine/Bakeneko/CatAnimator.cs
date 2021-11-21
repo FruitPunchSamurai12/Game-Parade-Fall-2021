@@ -16,6 +16,8 @@ public class CatAnimator : MonoBehaviour
     [SerializeField] string _chaseTrigger;
 
     public static event Action onStep;
+    public static event Action catHiss;
+    public static event Action catSniff;
 
     CinemachineImpulseSource impulseSource;
 
@@ -92,5 +94,17 @@ public class CatAnimator : MonoBehaviour
     {
         impulseSource.GenerateImpulse();
         onStep.Invoke();
+    }
+
+    public void CatHiss()
+    {
+        impulseSource.GenerateImpulse();
+        catHiss.Invoke();
+    }
+
+    public void CatSniff()
+    {
+        impulseSource.GenerateImpulse();
+        catSniff.Invoke();
     }
 }

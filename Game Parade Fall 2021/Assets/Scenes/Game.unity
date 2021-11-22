@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00006785629, g: 0.000076539596, b: 0.00006785629, a: 1}
+  m_IndirectSpecularColor: {r: 0.0000634055, g: 0.00007679647, b: 0.0000634055, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,80 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 716f732deea21404d91dc5b717c820ef, type: 2}
---- !u!1001 &43624879
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1633856388}
-    m_Modifications:
-    - target: {fileID: 218772907819558814, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: AreaID
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 218772907819558814, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: CatNewAreaID
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 218772907819558814, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: waypointToTeleportCatAfterItCatchesTheBird
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5158763079192524819, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: m_Name
-      value: Checkpoint (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -44.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -53.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
---- !u!4 &43624880 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
-  m_PrefabInstance: {fileID: 43624879}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &95878189
 GameObject:
   m_ObjectHideFlags: 0
@@ -37082,11 +37008,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 218772907819558814, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: AreaID
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 218772907819558814, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: CatNewAreaID
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 218772907819558814, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: waypointToTeleportCatAfterItCatchesTheBird
@@ -37102,7 +37028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.93
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37110,7 +37036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -49.77
+      value: -29.78
       objectReference: {fileID: 0}
     - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -37707,7 +37633,6 @@ Transform:
   - {fileID: 1937065803}
   - {fileID: 1094321340}
   - {fileID: 1786883243}
-  - {fileID: 43624880}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37754,7 +37679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 218772907819558814, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: CatNewAreaID
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 218772907819558814, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: waypointToTeleportCatAfterItCatchesTheBird
@@ -37770,7 +37695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 118
+      value: 27.2
       objectReference: {fileID: 0}
     - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37778,7 +37703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 45.3
+      value: -7.06
       objectReference: {fileID: 0}
     - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -37867,11 +37792,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 218772907819558814, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: AreaID
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 218772907819558814, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: CatNewAreaID
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 218772907819558814, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: waypointToTeleportCatAfterItCatchesTheBird
@@ -37887,7 +37812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -118.4
+      value: -23.6
       objectReference: {fileID: 0}
     - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37895,7 +37820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 116.5
+      value: -0.79
       objectReference: {fileID: 0}
     - target: {fileID: 7647093898509574768, guid: 89129986ed6b4d5489f5b5c8451815f0, type: 3}
       propertyPath: m_LocalRotation.w

@@ -47,8 +47,11 @@ public class Feather : PooledMonoBehaviour
         var distance = Vector3.Distance(transform.position, GameManager.Instance.ExitPoint.position);
         if (distance < colorAffectionDistance)
         {
-            var newColor = new Color(0f, (colorAffectionDistance - distance) * 1f / colorAffectionDistance, 0f);
-            for (int i = 0; i < renderer.materials.Length; i++) renderer.materials[i].color = newColor;
+            var increasingByDistance = (colorAffectionDistance - distance) * 1f / colorAffectionDistance;
+            var newColor = new Color(1f - increasingByDistance, 1f, 1f - increasingByDistance);
+
+            renderer.materials[0].SetColor("_EmissionColor", newColor);
+            renderer.materials[1].color = newColor;
         }
     }
 

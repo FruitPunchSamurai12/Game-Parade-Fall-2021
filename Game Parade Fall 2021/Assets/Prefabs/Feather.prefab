@@ -48,7 +48,7 @@ MonoBehaviour:
   rotateSpeed: 5
   floatSpeed: 4
   floatHeight: 0.3
-  colorAffectionDistance: 200
+  colorAffectionDistance: 150
   alphaReductionStrength: 0.035
   alphaReductionDistance: 35
 --- !u!1001 &2033275742483824402

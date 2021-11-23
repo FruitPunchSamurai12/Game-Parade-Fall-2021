@@ -1736,10 +1736,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PausePanel
       objectReference: {fileID: 0}
-    - target: {fileID: 2554315680715352379, guid: 0c80be7e2d0f6df4f9a0484637d034d3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c80be7e2d0f6df4f9a0484637d034d3, type: 3}
 --- !u!224 &1403593061 stripped

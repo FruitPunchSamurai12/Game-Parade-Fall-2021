@@ -384,34 +384,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1740610392, guid: c85875ac00c7197438c8a8681f9b080d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -197.64923
-      objectReference: {fileID: 0}
-    - target: {fileID: 4608042531802329933, guid: c85875ac00c7197438c8a8681f9b080d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -134.66034
-      objectReference: {fileID: 0}
-    - target: {fileID: 4608042532024759579, guid: c85875ac00c7197438c8a8681f9b080d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -134.66034
-      objectReference: {fileID: 0}
-    - target: {fileID: 4608042532079919133, guid: c85875ac00c7197438c8a8681f9b080d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -197.64923
-      objectReference: {fileID: 0}
-    - target: {fileID: 4608042532656385784, guid: c85875ac00c7197438c8a8681f9b080d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -197.64923
-      objectReference: {fileID: 0}
     - target: {fileID: 4608042532855490112, guid: c85875ac00c7197438c8a8681f9b080d, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1707844710}
-    - target: {fileID: 4608042532855490112, guid: c85875ac00c7197438c8a8681f9b080d, type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4608042532855490113, guid: c85875ac00c7197438c8a8681f9b080d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -496,21 +472,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4608042532855490115, guid: c85875ac00c7197438c8a8681f9b080d, type: 3}
-      propertyPath: m_ScreenMatchMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4608042532855490115, guid: c85875ac00c7197438c8a8681f9b080d, type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4608042532855490173, guid: c85875ac00c7197438c8a8681f9b080d, type: 3}
       propertyPath: m_Name
       value: MainCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 4608042532855490173, guid: c85875ac00c7197438c8a8681f9b080d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c85875ac00c7197438c8a8681f9b080d, type: 3}

@@ -531,7 +531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 230.43646, y: -197.6492}
+  m_AnchoredPosition: {x: 230.43646, y: -197.64923}
   m_SizeDelta: {x: 178, y: 169}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1740610395
@@ -1614,7 +1614,7 @@ Canvas:
   m_GameObject: {fileID: 4608042532855490173}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1643,7 +1643,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1836,6 +1836,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameplayPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 4543950605656621897, guid: fa02f04e62d2425429f75e1f4de060ba, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -134.66034
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa02f04e62d2425429f75e1f4de060ba, type: 3}
 --- !u!224 &4608042531361203778 stripped
@@ -1862,6 +1866,10 @@ PrefabInstance:
     - target: {fileID: 3865976212400474305, guid: 39fddfacb7b4e9544ae31bcd9463e40a, type: 3}
       propertyPath: m_Name
       value: SettingsPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865976212400474305, guid: 39fddfacb7b4e9544ae31bcd9463e40a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3865976212400474306, guid: 39fddfacb7b4e9544ae31bcd9463e40a, type: 3}
       propertyPath: m_Pivot.x
@@ -1967,6 +1975,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 4608042532259450606}
+    - target: {fileID: 3865976212898907635, guid: 39fddfacb7b4e9544ae31bcd9463e40a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -197.64923
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39fddfacb7b4e9544ae31bcd9463e40a, type: 3}
 --- !u!1 &4608042531757583663 stripped
@@ -2100,10 +2112,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 2866016658213610697, guid: ec79127b27b1d1147a65709f36810904, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.8999996
+      objectReference: {fileID: 0}
     - target: {fileID: 2866016658350923338, guid: ec79127b27b1d1147a65709f36810904, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4608042531757583661}
+    - target: {fileID: 2866016658690466121, guid: ec79127b27b1d1147a65709f36810904, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -197.64923
+      objectReference: {fileID: 0}
     - target: {fileID: 2866016658732931344, guid: ec79127b27b1d1147a65709f36810904, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2236,6 +2256,10 @@ PrefabInstance:
     - target: {fileID: 682914450844524606, guid: 95c14f6e49e43ce4d89b93e1ad8908fc, type: 3}
       propertyPath: m_Name
       value: ControlsPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 682914451328769392, guid: 95c14f6e49e43ce4d89b93e1ad8908fc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -134.66034
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95c14f6e49e43ce4d89b93e1ad8908fc, type: 3}

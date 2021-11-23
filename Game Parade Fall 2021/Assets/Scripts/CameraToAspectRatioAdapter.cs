@@ -5,11 +5,10 @@ public class CameraToAspectRatioAdapter : MonoBehaviour
 {
 
 	[SerializeField]
-	float aspectRatio = 16f/9f;
+	float targetAspect = 16f/9f;
 
 	void Start () 
 	{
-		float targetAspect = aspectRatio;
 		float windowAspect = (float)Screen.width / (float)Screen.height;
 		float scaleHeight = windowAspect/targetAspect;
 		Camera camera = GetComponent<Camera>();

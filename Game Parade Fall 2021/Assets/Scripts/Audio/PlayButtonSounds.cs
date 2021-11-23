@@ -9,7 +9,7 @@ public class PlayButtonSounds : MonoBehaviour, IPointerEnterHandler, IPointerCli
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        PlayClick();
+        //PlayClick();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

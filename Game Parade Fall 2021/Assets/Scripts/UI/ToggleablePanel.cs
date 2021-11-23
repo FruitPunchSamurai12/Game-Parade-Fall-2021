@@ -46,15 +46,15 @@ public class ToggleablePanel : MonoBehaviour
 
         _timer = 0;
         StopAllCoroutines();
+        if (_objectToToggleActive != null)
+            _objectToToggleActive.SetActive(true);
         StartCoroutine(ShowCoroutine());
     }
     [ContextMenu("Hide")]
     public void Hide()
     {
         _timer = 0;
-        StopAllCoroutines();
-        if (_objectToToggleActive != null)
-            _objectToToggleActive.SetActive(false);
+        StopAllCoroutines();       
         StartCoroutine(HideCoroutine());
     }
 
@@ -70,8 +70,7 @@ public class ToggleablePanel : MonoBehaviour
         _canvasGroup.alpha = 1f;
         _canvasGroup.blocksRaycasts = true;
         _canvasGroup.interactable = true;
-        if(_objectToToggleActive!=null)       
-            _objectToToggleActive.SetActive(true);
+
         
         onShowComplete?.Invoke();
     }
@@ -85,6 +84,8 @@ public class ToggleablePanel : MonoBehaviour
             _canvasGroup.alpha =1- _hideCurve.Evaluate(percentage);
             yield return null;
         }
+        if (_objectToToggleActive != null)
+            _objectToToggleActive.SetActive(false);
         _canvasGroup.alpha =  0f;
         _canvasGroup.blocksRaycasts = false;
         _canvasGroup.interactable = false;

@@ -15,6 +15,7 @@ public class GameStateMachine : MonoBehaviour
     bool _pausePressed;
     public int CurrentExit { get; private set; }
 
+    public event Action onLoadingComplete;
     public Type CurrentStateType => _stateMachine.CurrentState.GetType();
 
     private void Awake()
@@ -63,6 +64,12 @@ public class GameStateMachine : MonoBehaviour
     public void PauseButtonPressed()
     {
         _pausePressed = true;
+    }
+
+    public void LoadingComplete()
+    {
+        onLoadingComplete?.Invoke();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UIGameLaunch");
     }
 }
 
@@ -119,6 +126,7 @@ public class LoadLevel : IState
     public void OnExit()
     {
         _operations.Clear();
+        GameStateMachine.Instance.LoadingComplete();
     }
 
     public void Tick()

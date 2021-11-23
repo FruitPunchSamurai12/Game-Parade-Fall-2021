@@ -20,6 +20,6 @@ public class CameraToggleOnOff : MonoBehaviour
     void HandleLevelLoaded()
     {
         _cam.enabled = true;
-        GameStateMachine.Instance.onLoadingComplete += HandleLevelLoaded;
+        GameStateMachine.Instance.onLoadingComplete -= HandleLevelLoaded;
     }
 }

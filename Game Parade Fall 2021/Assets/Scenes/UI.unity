@@ -2437,7 +2437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hideOnStart: 0
   _showTime: 2
-  _hideTime: 3
+  _hideTime: 6
   _showCurve:
     serializedVersion: 2
     m_Curve:
@@ -2474,6 +2474,15 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
+    - serializedVersion: 3
+      time: 0.5026301
+      value: 0.00031654537
+      inSlope: 0.006208381
+      outSlope: 0.006208381
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.4567604
     - serializedVersion: 3
       time: 1
       value: 1

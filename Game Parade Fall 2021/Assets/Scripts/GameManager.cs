@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Transform spawnPlayerPos;
     [SerializeField]
-    GameObject[] exitPoints;
+    ExitPoints[] exitPoints;
 
     public Transform PlayerTransform { get; private set; }
     public Transform CatTransform { get; private set; }
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         _exitIndex = GameStateMachine.Instance.CurrentExit;
         for (int i = 0; i < exitPoints.Length; i++)
         {
-            exitPoints[i].SetActive(_exitIndex == i);          
+            exitPoints[i].ToggleActive(_exitIndex == i);          
         }
         InputManager.Actions.Global.Pause.performed += HandlePausePressed;
 

@@ -21,6 +21,17 @@ public class PlayerAnimator : MonoBehaviour
     private void OnEnable()
     {
         InputManager.Actions.Player.Mark.performed += OnMarkPressed;
+        GameStateMachine.Instance.onLoadingComplete += HandleGameLoaded;
+    }
+
+    void HandleGameLoaded()
+    {
+        GameStateMachine.Instance.onLoadingComplete -= HandleGameLoaded;
+        var fade = FindObjectOfType<FadeInOutPanel>();
+        if (fade != null)
+        {          
+            fade.onHideComplete += HandleStart;
+        }
     }
 
     private void OnDisable()
@@ -32,11 +43,26 @@ public class PlayerAnimator : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         movement = GetComponentInParent<PlayerMovement>();
+        movement.RestrictMovement();
         markerPlacer = GetComponentInParent<PlayerMarkerPlacer>();
     }
 
+    void HandleStart()
+    {
+        animator.SetTrigger("Start");
+        var fade = FindObjectOfType<FadeInOutPanel>();
+        if (fade != null)
+        {
+            fade.onHideComplete -= HandleStart;
+        }
+    }
+
+
+
     private void Update()
     {
+        if (movement._restrictMovement)
+            return;
         var movementInput = InputManager.Actions.Player.Movement.ReadValue<Vector2>();
 
         xMove = Mathf.Lerp(xMove, movementInput.x, 1f - transitionSmoothness);
@@ -53,6 +79,11 @@ public class PlayerAnimator : MonoBehaviour
             animator.SetTrigger("Mark");
             onMarkingStart?.Invoke();
         }
+    }
+
+    public void AllowMovementAfterGettingUpAnimation()
+    {
+        movement.AllowMovement();
     }
 
     public void Blow () => onBlow?.Invoke();

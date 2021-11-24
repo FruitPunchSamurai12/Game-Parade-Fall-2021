@@ -40,8 +40,6 @@ public class Feather : PooledMonoBehaviour
         AlphaCorrection();
     }
 
-
-
     void SetColor()
     {
         var distance = Vector3.Distance(transform.position, GameManager.Instance.ExitPoint.position);

@@ -9,7 +9,7 @@ Shader "Custom/SilhouetteShader"
      {
          SubShader 
          { 
-             Tags { "Queue"="Overlay+1" }
+             Tags { "Queue"="Overlay+100" }
      
              Pass
              {

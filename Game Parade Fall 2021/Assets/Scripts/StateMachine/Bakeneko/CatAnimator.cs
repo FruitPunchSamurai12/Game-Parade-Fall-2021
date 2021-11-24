@@ -10,6 +10,7 @@ public class CatAnimator : MonoBehaviour
     Animator _animator;
     NavMeshAgent _agent;
     AIStateMachine _catStateMachine;
+    [SerializeField] GameObject exclamination;
     [SerializeField] string _patrolTrigger;
     [SerializeField] string _suspiciousTrigger;
     [SerializeField] string _investigateTrigger;
@@ -101,11 +102,18 @@ public class CatAnimator : MonoBehaviour
     {
         impulseSource.GenerateImpulse();
         catHiss.Invoke();
+
+        exclamination.SetActive(true);
     }
 
     public void CatSniff()
     {
         impulseSource.GenerateImpulse();
         catSniff.Invoke();
+    }
+
+    public void AlertEnd ()
+    {
+        exclamination.SetActive(false);
     }
 }

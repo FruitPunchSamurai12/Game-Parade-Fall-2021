@@ -69,7 +69,7 @@ public class GameStateMachine : MonoBehaviour
     public void LoadingComplete()
     {
         onLoadingComplete?.Invoke();
-        FMODUnity.RuntimeManager.PlayOneShot("event:/UIGameLaunch");
+        
     }
 }
 

@@ -2437,7 +2437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hideOnStart: 0
   _showTime: 1.5
-  _hideTime: 4
+  _hideTime: 6
   _showCurve:
     serializedVersion: 2
     m_Curve:

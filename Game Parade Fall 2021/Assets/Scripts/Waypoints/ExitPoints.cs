@@ -6,12 +6,42 @@ using UnityEditor;
 [RequireComponent(typeof(BoxCollider))]
 public class ExitPoints : MonoBehaviour
 {
+    [SerializeField] GameObject[] activeExitPointObjects;
+    [SerializeField] GameObject[] inactiveExitPointObjects;
     BoxCollider _col;
     bool _triggered = false;
 
     private void OnValidate()
     {
         _col = GetComponent<BoxCollider>();
+    }
+
+    public void ToggleActive(bool active)
+    {
+        if(active)
+        {
+            foreach (var go in activeExitPointObjects)
+            {
+                go.SetActive(true);
+            }
+            foreach (var go in inactiveExitPointObjects)
+            {
+                go.SetActive(false);
+            }
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            foreach (var go in activeExitPointObjects)
+            {
+                go.SetActive(false);
+            }
+            foreach (var go in inactiveExitPointObjects)
+            {
+                go.SetActive(true);
+            }
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
